@@ -1,0 +1,51 @@
+*{padding: 0;margin: 0;list-style-type: none;font-family: "微软雅黑","宋体",arial;} 
+.clearfix:before, .clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.list_box,.nav1_icon,.nav2Box{ display: inline-block;*display: inline;*zoom: 1; }
+.content{margin: 0 auto; padding:10px 0 0; position: relative;}
+.list_box{margin:0 15px; }
+/**.list_box ul{padding-left:15px;}**/
+.list_box_r .nav1{visibility:hidden;}
+/* 滚动条样式 */
+/**::-webkit-scrollbar {width: 5px;height: 5px;}
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);-webkit-border-radius: 10px;border-radius: 10px;}
+::-webkit-scrollbar-thumb {-webkit-border-radius: 10px;border-radius: 10px;background: rgba(4, 24, 36, 0.6);-webkit-box-shadow: inset 0 0 6px rgba(4, 24, 36, 0.7);}
+::-webkit-scrollbar-thumb:window-inactive {background: rgba(0, 0, 0, 0.2);}
+/* end/滚动条 */
+.nav1{text-align: center;padding: 8px 0;cursor: default;font-size: 18px;color: #706f70;border-bottom: 1px solid #ddd;width: 100%;}
+.nav1_icon{background: url('../image/HR.jpg')no-repeat center 0;width: 100%;height: 95px;background-size:100%;margin: 10px 0;margin-bottom:5px;}
+.nav1_icon_1{background-position: center 0; }
+.nav1_icon_2{background-position: center -67px;}
+.nav1_icon_3{background-position: center -134px;}
+.nav1_icon_4{background-position: center -201px;}
+.nav1_icon_5{background-position: center -268px;}
+.nav1_icon_6{background-position: center -336px;}
+.nav2Box{
+	width:100%;
+	padding-left: 28px;
+}
+.nav2{height: 25px;width: 100%; line-height: 25px; margin: 6px 0;cursor: pointer; font-size: 15px; left: -1px;color: #2e2624;    overflow: hidden;
+font-size:12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;}
+
+.nav3Box{border: 1px solid #c9c9ca;position: absolute;min-width: 190px;display:none;}
+.nav3{  background-color: #FFFFFF;   color: #2e2624;  cursor: pointer;  position: relative;  font-size: 13px;  padding: 0;   line-height: 30px;  white-space: nowrap; height: 30px; padding: 0 10px;	}
+.jiao{width: 7px;background-color: red; height: 12px;position: absolute; background: url('../image/rightIcon.png') no-repeat 0 -405px;}
+.jiao_show_right{ background-position:-19px -405px;   } 
+.nav3:hover {background-color: #727071;color: #fff;}
+.nav3:hover  .jiao{  background-position: -8px -405px;   }
+.nav3:hover  .jiao_show_right{  background-position:-27px -405px; }
+/**.nav2:before{
+	content: '';
+    display: inline-block;
+    width: 5px;
+    border-radius: 50%;
+    height: 5px;
+    background: #C6DAE5;
+    margin-right: 8px;
+}**/
+.nav2>span{
+	margin-right: 10px;
+}
+.list_box{display:block;}

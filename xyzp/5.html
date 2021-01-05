@@ -1,0 +1,1220 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="mobileUrl" content="http://江苏校园招聘网.m.zhiye.com/">
+<link type="text/css" rel="stylesheet" href="../static/css/frontmodule.css">
+<link type="text/css" rel="stylesheet" href="../static/css/111111_themes_江苏校园招聘网new_global-0.1..css" front="css">
+<link type="text/css" rel="stylesheet" href="../static/css/111111_themes_江苏校园招聘网new_bxslider-0..css" front="css">
+<link type="text/css" rel="stylesheet" href="../static/css/111111_themes_江苏校园招聘网new_style0901-0.css" front="css">
+<script type="text/javascript">
+       //mobileUrl rewrite
+       function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          var appSrcMetas = document.getElementsByName('mobileUrl');
+			      if(appSrcMetas.length > 0) {
+		       		  window.location.href = appSrcMetas[0].getAttribute("content");
+			      }
+		    }
+		  }
+      goPAGE();
+
+       //opsapi
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//'+document.location.host+'/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script>
+<script type="text/javascript" src="../static/js/111111_themes_江苏校园招聘网new_bsbase-0.1..js"></script>
+<script type="text/javascript" src="../static/js/111111_themes_江苏校园招聘网new_bxsliderjs-.js"></script>
+<script type="text/javascript">var $bs_vars={'st':'//stc.beisen.com/','version':'2020.11.09.001','constSite':'//const.italent.cn'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script><!--引用静态文件:requirejs-->
+<script type="text/javascript" src="../static/js/require.js"></script>
+<title>江苏校园招聘网-江苏招聘网</title>
+<script>
+ function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+			    var appSrcMetas = document.getElementsByName('mobileUrl');
+			    if(appSrcMetas.length > 0){
+		       		window.location.href = appSrcMetas[0].getAttribute("content");
+			    }
+		    } 
+		  }
+      goPAGE();
+</script>
+  <style>
+    .bodynow{overflow: hidden;}
+  </style>
+<script>  $(function () {
+
+            $(".tcxct li").click(function () {
+                var num3 = $(".tcxct li").index($(this))
+                $(this).addClass("now")
+                $(this).siblings("li").removeClass("now")
+                $(".tcxcbm").eq(num3).slideDown()
+                $(".tcxcbm").eq(num3).siblings(".tcxcbm").slideUp()
+            })
+
+            /****/
+            $(".zwss_input").focus(function () {
+                if ($(this).val() == "职位太多？搜一下试试！") {
+                    $(this).val("");
+                    $(this).addClass("col333")
+                }
+            })
+            $(".zwss_input").blur(function () {
+                if ($(this).val() == "") {
+                    $(this).val("职位太多？搜一下试试！");
+                    $(this).removeClass("col333")
+                }
+            })
+            $(".zwlb li a").click(function () {
+                url = $(this).attr("data");
+                $(".tcbg").fadeIn()
+                $(".tcbox").fadeIn()
+                $(".zwxqtc").slideDown()
+                $('iframe').attr('src', url);
+              $('body').addClass('bodynow')
+            })
+
+            /****/
+            $(".qa li").click(function () {
+                $(".tcbg").fadeIn()
+                $(".tcbox2").fadeIn()
+                var num4 = $(".qa li").index($(this))
+                $(".tcqa li").eq(num4).show()
+                $(".tcqa li").eq(num4).siblings("li").hide()
+                  $('body').addClass('bodynow')
+            })
+            $('.hddb').click(function () {
+                $('body,html').stop().animate({
+                    'scrollTop': 0,
+                    'duration': 100,
+                    'easing': 'ease-in'
+                })
+            });
+
+            $(".djtcwd").click(function () {
+                $(".tcbg").fadeIn()
+                $(".tcbox").fadeIn()
+                $(".tcwd").slideDown()
+                  $('body').addClass('bodynow')
+            })
+
+            $(".icon4").click(function () {
+                $(".zwxqtc").slideUp()
+                $(".tcwd").slideUp()
+                $(".tcxc").slideUp()
+                $(".tcbox,.tcbox2").fadeOut()
+                $(".tcbg").fadeOut()
+                   $('body').removeClass('bodynow')
+            })
+
+
+        })
+
+ 
+
+</script>
+
+<style type="text/css">
+  .sina{display: block;}
+</style>
+</head>
+
+<body>
+ 
+<style type="text/css">
+    .isLogin,.unLogin {
+        display:inline-block;
+        vertical-align: top;
+    }
+  .nav a{margin:0 38px}
+</style>  
+<div class="header">
+  <span class="logo"><a href="../index1.html" target="_blank" class="gw"></a>
+    <a href="javascript:;" target="_blank" class="gw b f26" style="
+    color: #000;
+    width: 105px;
+    margin: 0;
+    vertical-align: middle;
+">加入我们</a><img src="../static/picture/111111_themes_江苏校园招聘网new_images_nav.png" style="
+    vertical-align: middle;
+"><a href="../xyzp.html" class="gwr" style="
+    vertical-align: middle;
+">校园招聘</a></span>
+  <div class="headerr">
+    <div class="isLogin" style="display:none">
+              <a href="../Portal/Account/Login-http2f2fwww.jsxyzp.com2fPo.html">个人中心</a>
+              <a href="../User/Account/LogOut.html">退出</a>
+          </div>
+          <div class="unLogin" style="display:none">
+                  <a href="../Portal/Account/Login-2Fxyzp2F3FPageIndex3D5.html">登录</a>
+                  <a href="../Portal/Account/Register-2Fxyzp2F3FPageIndex3D5.html">注册</a>
+    </div>
+    <span></span></div>
+  <div class="cb"></div>
+ </div><!--header end-->
+ <div class="navbg"><div class="nav">
+  <a href="../xyzp.html" class='now'>校园招聘</a>
+   <a href="../intern.html" class=''>实习生</a>
+   <a href="../OpenDay.html" class=''>OpenDay</a>
+   <!--<a href="/jlbjs" class=''>校园俱乐部</a>-->
+   <a href="" class=''>校园俱乐部</a>
+   <a href="../challenges.html" class=''>江苏校园招聘网创新挑战赛</a>
+   <a href="javascript:;" class=''>江苏校园招聘网营销挑战赛</a>
+   <a href="../qzbd.html" class=''>求职宝典</a>
+ </div></div><!--navbg end-->
+<script type="text/javascript">
+    var makeUserInfo = function (resp) {
+        var userInfo = {};
+        //userInfo.name = resp.Model.Email;
+        userInfo.isLogin = resp.Success;
+        return userInfo;
+    }
+    
+    $.ajax({
+        url: '/User/Account/GetUserLoginInfo?v=' + Math.random()
+        , data: {}
+        , cache: false
+        , type: 'post'
+        , success: function (resp) {
+            //配置用户基本信息
+            var userInfo = makeUserInfo(resp);
+            var loginView = $(".header .isLogin");
+            var unLoginView = $(".header .unLogin");
+            if (userInfo.isLogin) {
+                loginView.show()
+            }
+            else {
+                unLoginView.show()
+            }
+            
+        }//success
+        , error: function () {
+            throw new Error('ERROR: get user info')
+        }
+    });//ajax    });//ajax   
+
+</script>
+  <div class="bgfa"><div class="xcbox">
+  <div class="xcl">
+   <!--<div class="slider1">
+   <div class="slider"><a href="https://mp.weixin.qq.com/s/RUZnYn5XeA0Qez41w3WMXw" target="_blank"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner1.jpg" alt="" class="djtcwd"/></a></div>
+    <div class="slider"><a href="https://mp.weixin.qq.com/s/cB82hC5J32mpYsyQls5G8A" target="_blank"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner2.jpg" alt=""/></a></div>
+    
+ <div class="slider"><a href="https://mp.weixin.qq.com/s/gZ0Ye6Gc_ixeEAuFuKHWOw" target="_blank"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner3.jpg" alt=""/></a></div>
+   </div>
+   <div id="bx-pager">
+     <div class="bx-pagerm" style="width:186px">
+       <a data-slide-index="0" href="https://mp.weixin.qq.com/s/RUZnYn5XeA0Qez41w3WMXw"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner1.jpg" /></a>
+    
+    <a data-slide-index="1" href="https://mp.weixin.qq.com/s/cB82hC5J32mpYsyQls5G8A"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner2.jpg" /></a>
+        <a data-slide-index="2" href="https://mp.weixin.qq.com/s/gZ0Ye6Gc_ixeEAuFuKHWOw"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner3.jpg" /></a>
+    
+    </div>-->
+    <div class="slider1">
+   <!--<div class="slider"><a href="https://mp.weixin.qq.com/s/RUZnYn5XeA0Qez41w3WMXw" target="_blank"><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_banner1.jpg" alt="" class="djtcwd"/></a></div>-->
+   
+   </div>
+   <div id="bx-pager">
+     <div class="bx-pagerm">
+    
+    </div>
+    <div class="cb"></div>
+   </div>
+  </div><!--xcl end-->
+        <div class="xcr">
+            <div class="xcrt">
+                <span class="icon1">宣讲会行程</span>
+                <a href="javascript:void(0)" class="xcrtrr" data-day="0">查看更多</a>
+                <div class="xcrtr">
+                    <span class="icon2a"></span>
+                    <div class="xcrtrm">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <span class="icon2b"></span>
+                </div><!--xcrtr end-->
+                <div class="cb"></div>
+            </div><!--xcrt end-->
+            <div class="xcrb">
+                <!--~~~~~-->
+
+                <!--~~~~~-->
+
+            </div><!--xcrb end-->
+        </div><!--xcr end-->
+        <div class="cb"></div>
+    </div>
+</div><!--xcbox end-->
+
+
+
+
+<script type="text/javascript">
+    var day = 0;
+    var city = '';
+    var myDate = new Date();
+    var month = myDate.getMonth() + 1;
+    var month_temp = myDate.getMonth() + 1;
+
+
+    function get_area(month) {
+       
+        $.ajax({
+            type: "get",
+            url: "http://江苏校园招聘网.yuegekeji.cn/api/area",
+            data: {
+                month: month,city: city
+            },
+            dataType: "jsonp", //指定服务器返回的数据类型
+            datatype: "ajax", //"xml", "html", "script", "json", "jsonp", "text".
+            success: function (data) {
+                $('.csl').html(data.area_html)
+                   $('.xcnrtm2').html(data.xc)
+            },
+
+        });
+    }
+
+
+    function get_rili(mon, type) {
+ console.log(mon)
+        $.ajax({
+            type: "get",
+            url: 'http://江苏校园招聘网.yuegekeji.cn/api/rili',
+            data: {month: mon, type: type, day: day, city: city},
+            dataType: "jsonp", //指定服务器返回的数据类型
+            datatype: "ajax", //"xml", "html", "script", "json", "jsonp", "text".
+            success: function (data) {
+
+               $('.xcnrtm1').html(data.xc)
+                $('.xcrb').html(data.html)
+                    $('.xcrtrm ul').html(data.month_html)
+                    $('.rqltm ul').html(data.month_html)
+                 
+                        $('.rqlbm').html(data.htmltc)
+  
+                      
+                get_area(month_temp)
+
+            },
+
+        });
+    }
+
+    $(document).ready(function () {
+
+        get_rili(month_temp, 1);
+        $("body").on("hover", ".xc", function (e) {
+
+            if (e.type == "mouseenter") {
+                //鼠标悬浮
+                $(this).children('.tishi,.icon20').show()
+                  if($(this).children('b').hasClass('lan')){
+    $(this).children('.tishi').css({
+      marginLeft: '-450px',
+    });
+  }
+            } else if (e.type == "mouseleave") {
+                //鼠标离开
+                $(this).children('.tishi,.icon20').hide()
+            }
+
+        });
+
+        $(".icon2b").click(function () {
+          
+            if (month_temp < 12) {
+                month_temp++;
+            }
+          
+            get_rili(month_temp, 1)
+        });
+        $(".icon7b").click(function () {
+            if (month_temp < 12) {
+                month_temp++;
+            }
+            get_rili(month_temp, 2)
+        });
+
+        $(".icon2a").click(function () {
+            if (month_temp > 1) {
+                month_temp--;
+            }
+            get_rili(month_temp, 1)
+        });
+
+        $(".icon7a").click(function () {
+            if (month_temp > 1) {
+                month_temp--;
+            }
+            get_rili(month_temp, 2)
+        });
+
+
+        $("body").on("click", ".xcrtrr,.tishi li", function (e) {
+            $(".tcbg").fadeIn()
+            $(".tcbox").fadeIn()
+            $(".tcxc").slideDown()
+            $('.rqlb .rqlbm').html('')
+            $('.xcnrtm1').html('')
+            $(".tcxct li:eq(0)").click()
+            day = $(this).data('day');
+            get_rili(month_temp, 2)
+              $('body').addClass('bodynow')
+
+        })
+
+
+        $("body").on("click", ".xcap2", function () {
+           console.log(month_temp+'xcap2')
+            day = $(this).data('day')
+            get_rili(month_temp, 3)
+
+        });
+
+        $("body").on("click", ".csl li a", function () {
+
+            $(this).parent().parent().parent().find("a").removeClass("now")
+            $(this).addClass("now")
+            city = $(this).data('city')
+            get_rili(month_temp, 4)
+        })
+
+        $.ajax({
+            type: "get",
+            url: "http://江苏校园招聘网.yuegekeji.cn/api/banner",
+            dataType: "jsonp", //指定服务器返回的数据类型
+            datatype: "ajax", //"xml", "html", "script", "json", "jsonp", "text".
+
+            success: function (data) {
+
+                $('.slider1').html('')
+                $('.bx-pagerm').html('')
+                for (var i = 0; i < data.length; i++) {
+
+                    $('.slider1').append('<div class="slider"><a href="' + data[i].url + '" target="_blank"><img  src="' + data[i].litpic + '" alt=""/></a> </div>');
+                    $('.bx-pagerm').append('<a data-slide-index="' + i + '" href=""><img  src="' + data[i].litpic_sm + '"/></a>');
+                }
+
+                $('.slider1').bxSlider({
+                    auto: true,
+                    pagerCustom: '#bx-pager'
+                });
+            },
+
+        });
+
+
+    });
+</script>
+ 
+<style>
+  .zwtr2m{display:none}
+</style>
+<div class="xzbg"><div class="wrap">
+ <div class="tc" id="tc"><img src="../static/picture/111111_themes_江苏校园招聘网new_img_icon10a.png" alt=""></div>
+ <div class="zwss">
+  <input type="text" name="" id="txtInKey" value="职位太多？搜一下试试！" onfocus="if(value=='职位太多？搜一下试试！') {value='';}" onblur="if (value=='') {value='职位太多？搜一下试试！';}" class="zwss_input">
+  <input type="button" name="" value="" class="zwss_btn">
+  <div class="cb"></div>
+ </div><!--zwss end-->
+ <div class="zwt">
+  <ul>
+    <li>
+    <div class="zwtl" style="background:url(../static/image/111111_themes_江苏校园招聘网new_img_syicon4.png) no-repeat center center;">业务板块：</div>
+     <div class="zwqb2" style="background:#fff;">
+       <a href="../xyzp-15E-1_-1_1_2.html#tc" value="1^-1">全部</a>
+      </div>
+     <div class="zwlxr">
+      <div class="zwlxrm zwlxrm1">
+         
+                                 <a href="../xyzp-15E56_-1_1_2_57.html#tc" class="citiesConditions1 ">显示器件</a><!--校招-DAS/IMS-->  
+                                         <a href="../xyzp-15E78_-1_1_2_79.html#tc" class="citiesConditions1 ">传感器及解决方案</a><!--校招-DAS/IMS-->  
+                                           <a href="../xyzp-15E35_-1_1_2_36.html#tc" class="citiesConditions1 ">智慧物联</a><!--校招-ITS/AIP/零售-->  
+                                           <a href="../xyzp-15E39_-1_1_2_46.html#tc" class="citiesConditions1 ">智慧医工</a><!--校招-MHP/SHS-->  
+          
+                         <a href="../xyzp-15E72_-1_1_2_61.html#tc" class="citiesConditions1 ">集团技术中心</a><!--校招-技术中心-->  
+                       <a href="../xyzp-15E32_-1_1_2_10.html#tc" class="citiesConditions1 ">职能类</a>
+
+               <a href="../xyzp-15E18_-1_1_2_18.html#tc" class="citiesConditions1 ">管理培训生</a>
+
+      </div>
+     </div>
+    <div class="cb"></div>
+   </li>
+    <li id="jc1">
+      <div class="zwtl" style="background:url(../static/image/111111_themes_江苏校园招聘网new_img_syicon41.png) no-repeat center center;">职位类别：</div>
+      <div class="zwqb2"><!--<a href="javascript:void(0)" onclick="checkCategory(this)"  style="line-height:25px"   value="1^-1" class="categoryConditions" >全部</a>--></div>
+      <div class="zwtr2" style=" padding:0 0 0 40px"><div style="display: table-cell;    vertical-align: middle;    width: 865px;    height: 80px;">
+     
+        <div class="zwtr2m" style="display:block">
+                            <a href="../xyzp-15E56_-1_1_2_57.html#tc" value="1^56" class="">研发类</a>
+                            <a href="../xyzp-15E55_-1_1_2_57.html#tc" value="1^55" class="">工程类</a>
+                            <a href="../xyzp-15E54_-1_1_2_57.html#tc" value="1^54" class="">品质类</a>
+                            <a href="../xyzp-15E53_-1_1_2_57.html#tc" value="1^53" class="">营销类</a>
+                            <a href="../xyzp-15E52_-1_1_2_57.html#tc" value="1^52" class="">供应链类</a>
+                            <a href="../xyzp-15E101_-1_1_2_57.html#tc" value="1^101" class="">IT类</a>
+                             </div>
+        <div class="zwtr2m" style="">
+                            <a href="../xyzp-15E78_-1_1_2_79.html#tc" value="1^78" class="">研发类</a>
+                            <a href="../xyzp-15E77_-1_1_2_79.html#tc" value="1^77" class="">营销类</a>
+                            <a href="../xyzp-15E100_-1_1_2_79.html#tc" value="1^100" class="">产品类</a>
+                             </div>
+        <div class="zwtr2m" style="">
+                            <a href="../xyzp-15E35_-1_1_2_36.html#tc" value="1^35" class="">研发类</a>
+                            <a href="../xyzp-15E51_-1_1_2_36.html#tc" value="1^51" class="">产品类</a>
+                            <a href="../xyzp-15E48_-1_1_2_36.html#tc" value="1^48" class="">营销类</a>
+                            <a href="../xyzp-15E50_-1_1_2_36.html#tc" value="1^50" class="">工程类</a>
+                            <a href="../xyzp-15E49_-1_1_2_36.html#tc" value="1^49" class="">品质类</a>
+                            <a href="../xyzp-15E47_-1_1_2_36.html#tc" value="1^47" class="">供应链类</a>
+                            <a href="../xyzp-15E99_-1_1_2_36.html#tc" value="1^99" class="">其他类</a>
+                             </div>
+        <div class="zwtr2m" style="">
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^39'; " class="">医疗类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^39" class="categoryConditions " >医疗类</a>-->
+          <a href="../xyzp-15E39_-1_1_2_46.html#tc" value="1^39" class="">医疗类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^45'; " class="">研发类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^45" class="categoryConditions " >研发类</a>-->
+          <a href="../xyzp-15E45_-1_1_2_46.html#tc" value="1^45" class="">研发类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^44'; " class="">产品类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^44" class="categoryConditions " >产品类</a>-->
+          <a href="../xyzp-15E44_-1_1_2_46.html#tc" value="1^44" class="">产品类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^43'; " class="">工程类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^43" class="categoryConditions " >工程类</a>-->
+          <a href="../xyzp-15E43_-1_1_2_46.html#tc" value="1^43" class="">工程类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^42'; " class="">品质类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^42" class="categoryConditions " >品质类</a>-->
+          <a href="../xyzp-15E42_-1_1_2_46.html#tc" value="1^42" class="">品质类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^41'; " class="">营销类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^41" class="categoryConditions " >营销类</a>-->
+          <a href="../xyzp-15E41_-1_1_2_46.html#tc" value="1^41" class="">营销类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^40'; " class="">供应链类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^40" class="categoryConditions " >供应链类</a>-->
+          <a href="../xyzp-15E40_-1_1_2_46.html#tc" value="1^40" class="">供应链类</a>
+                            <!--<a onclick="document.getElementById('hidcate1').value='1^37'; " class="">其他类</a> 
+                             <a href="javascript:void(0)"  onclick="checkCategory(this)"    value="1^37" class="categoryConditions " >其他类</a>-->
+          <a href="../xyzp-15E37_-1_1_2_46.html#tc" value="1^37" class="">其他类</a>
+                             </div>
+        <div class="zwtr2m" style="">
+           <!--                                 <a href="/xyzp?k=&c=&p=1^7&day=-1&PageIndex=1&class=2&sort=10#tc" style="cursor:pointer" value="1^7"  class="">IT类</a>
+                                            <a href="/xyzp?k=&c=&p=1^6&day=-1&PageIndex=1&class=2&sort=10#tc" style="cursor:pointer" value="1^6"  class="">市场类</a>
+-->
+                                 <a href="../xyzp-15E32_-1_1_2_10.html#tc" style="cursor:pointer" value="1^32" class="">人力资源类</a><!--人事类-->
+                                            <a href="../xyzp-15E33_-1_1_2_10.html#tc" style="cursor:pointer" value="1^33" class="">财务类</a><!--财务类-->
+                                            <a href="../xyzp-15E31_-1_1_2_10.html#tc" style="cursor:pointer" value="1^31" class="">法务类</a><!--法务类-->
+           <!--                                 <a href="/xyzp?k=&c=&p=1^30&day=-1&PageIndex=1&class=2&sort=10#tc" style="cursor:pointer" value="1^30"  class="">审计类</a>
+-->
+                                 <a href="../xyzp-15E28_-1_1_2_10.html#tc" style="cursor:pointer" value="1^28" class="">行政类</a>
+                                           <a href="../xyzp-15E5_-1_1_2_10.html#tc" style="cursor:pointer" value="1^5" class="">供应链类</a>
+                                           <a href="../xyzp-15E105_-1_1_2_10.html#tc" style="cursor:pointer" value="1^105" class="">市场品牌类</a>
+                                           <a href="../xyzp-15E104_-1_1_2_10.html#tc" style="cursor:pointer" value="1^104" class="">企业文化类</a>
+                                           <a href="../xyzp-15E103_-1_1_2_10.html#tc" style="cursor:pointer" value="1^103" class="">经营企划类</a>
+                                            <a href="../xyzp-15E62_-1_1_2_10.html#tc" style="cursor:pointer" value="1^62" class="">其他类</a><!--其他类-->
+           <!--                                 <a href="/xyzp?k=&c=&p=1^18&day=-1&PageIndex=1&class=2&sort=10#tc" style="cursor:pointer" value="1^18"  class="">管理培训生</a>
+-->
+        </div>
+         <div class="zwtr2m" style="">
+                            
+                            <a href="../xyzp-15E72_-1_1_2_61.html#tc" value="1^72" class="">研发类</a>
+                            <a href="../xyzp-15E97_-1_1_2_61.html#tc" value="1^97" class="">研发管理类</a>
+                            <a href="../xyzp-15E93_-1_1_2_61.html#tc" value="1^93" class="">信息技术类</a>
+                            <a href="../xyzp-15E73_-1_1_2_61.html#tc" value="1^73" class="">博士后</a>
+                            <a href="../xyzp-15E98_-1_1_2_61.html#tc" value="1^98" class="">技术培训生</a>
+                             </div>
+      
+ </div>
+    </div><!--zwtr2 end-->
+    <div class="cb"></div>
+   </li>
+   <li id="city">
+    <div class="zwtl" style="background:url(../static/image/111111_themes_江苏校园招聘网new_img_syicon42.png) no-repeat center center #1b72bd;    height: 130px;    line-height: 130px;">工作城市：</div>
+     <div class="zwqb">
+                   <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="-1" style="    line-height: 50px;">全部</a>
+ 
+      <!--<a href="">全部</a>--></div>
+    <div class="zwtr">
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="1100">北京</a>
+ <!--beijing-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3401">合肥</a>
+<!--hefei-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5101">成都</a>
+<!--chengdu-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5000">重庆</a>
+<!--chongqing-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3501">福州</a>
+<!--fuzhou-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5107">绵阳</a>
+ <!--mianyang-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4201">武汉</a>
+<!--wuhan-->
+      
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5301">昆明</a>
+<!--kunming-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3205">苏州</a>
+<!--suzhou-->
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="1506">鄂尔多斯</a>
+<!--eerduosi-->
+      
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="131003">固安</a>
+<!--gu an-->
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4416">河源</a>
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4301">长沙</a>
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3702">青岛</a>
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4403">深圳</a>
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4401">广州</a>
+      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="9000">其他</a>
+      <!--               <a href='javascript:void(0)' onclick="checkCity(this)"    class="citiesConditions " value="4416" >河源</a>
+--><!--heyuan-->
+    <!--<a href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions" value="1100" >北京</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="5101" >成都</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="5000" >重庆</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="5107" >绵阳</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="4201" >武汉</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="3401" >合肥</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="3501" >福州</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="1506" >鄂尔多斯</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="131003" >固安</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="5301" >昆明</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="3205" >苏州</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="4416" >河源</a>
+     <a  href='javascript:void(0)' onclick="checkCity(this)"   class="citiesConditions " value="4403" >深圳</a>-->     
+    </div>
+    <div class="cb"></div>
+   </li>
+    
+    
+    
+    
+  </ul>
+ </div><!--zwt end-->
+ <div class="cb pb45"></div>
+ <div class="zwlb"><!--<span class="zwlbline"></span>-->
+  <ul>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034984">供应链专员（北京）(J24928)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034983">公共事务专员（鄂尔多斯）(J24927)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034982">公共事务专员（固安）(J24926)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034981">公共事务专员（北京）(J24925)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034980">公共事务专员（福州）(J24924)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034979">经营企划专员（绵阳）(J24923)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034978">经营企划专员（合肥）(J24922)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034977">经营企划专员（固安）(J24921)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034976">经营企划专员（成都）(J24920)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034975">经营企划专员（苏州）(J24919)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034974">秘书（北京）(J24918)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034973">市场洞察专员（北京）(J24917)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034972">战略企划专员（合肥）(J24916)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034971">信息安全专员（北京）(J24915)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034970">战略企划专员（北京）(J24914)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034969">医疗经营企划专员（北京）(J24913)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034968">企划专员（健康园区）（北京）(J24912)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034967">业务发展专员（健康园区）（北京）(J2491...</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034965">项目助理（健康园区）（北京）(J24909)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034964">行政专员（健康园区）（北京）(J24907)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+    <li>
+     <a href="javascript:void()" data="/zwxq?jobId=880034963">管家（健康园区）（北京）(J24906)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-09-20</span>-->
+    </li>
+   <!--
+   <li><a href="javascript:void()" data="/zwxq">工艺开发工程师（北京）(J14624)</a><span>2017-08-15</span></li>-->
+   <div class="cb"></div>
+  </ul>
+ </div><!--zwlb end-->
+<div class="page pt40"><a href='4.html' class="next">上一页</a><a href='1.html'>1</a><a href='2.html'>...</a><a href='3.html'>3</a><a href='4.html'>4</a><a href="javascript:void(0);" class="now">5</a><a href='6.html'>6</a><a href='7.html'>7</a><a href='8.html'>...</a><a href='../User/Account/LogOut.html'>21</a><a href='6.html' class="next">下一页</a></div><!--
+ <div class="page pt40">
+  <a href="" class="next">上一页</a>
+  <a href="" class="now">1</a>
+  <a href="">2</a>
+  <a href="">3</a>
+  <a href="">4</a>
+  <a href="">5</a>
+  <a href="" class="next">下一页</a>
+ </div>--><!--page end-->
+</div></div>
+<script>
+ $(function(){
+
+   
+   $(".icon20").click(function(){
+           $(this).toggleClass("icon20now")
+           $(this).siblings(".skeyboxmm").toggleClass("skeyboxmmnow")
+           })
+     /* $(".zwrb tr:odd").css("background","#f1f4fc")*/
+
+         })
+ 
+</script>               
+<script>  
+  function checkCategory(obj){         
+    $(obj).siblings().removeClass("now");
+    $(obj).addClass("now");
+     sch();    
+  }
+  
+  function checkCity(obj){
+      $(obj).addClass("now");     
+      var ech=  $(obj).siblings();
+      ech.removeClass("now");    
+      sch();    
+  }
+
+  function checkTime(obj){      
+     $(obj).siblings().removeClass("now");        
+      $(obj).addClass("now");
+     sch();    
+  }
+  
+    $(function(){                     
+      $(".zwss_btn").click(function(){
+	 sch();
+	});							
+  });
+$('#txtInKey').bind('keypress',function(event){
+    if(event.keyCode == "13")    
+    {
+     sch();
+    }
+});
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+  function sch() {
+    var page=1;
+    var href = "";
+    var c = null;
+    var la = $("a.citiesConditions");
+    la.each(function() {
+
+        if ($(this).attr("class").indexOf("now")!=-1) {
+
+            c = $(this).attr("value");
+            return false;
+        }
+    });
+    var n = null;
+    la = $(".categoryConditions");
+    la.each(function() {
+
+        if ($(this).attr("class").indexOf("now")!=-1) {
+
+            n = $(this).attr("value");
+            return false;
+        }
+    });
+    var d = null;
+/*d = $("a.timeConditions");
+    d.each(function() {
+        if ($(this).attr("class").indexOf('now')!=-1) {
+            d = $(this).attr('value');
+            return false;
+        }
+});  */  
+    
+     var sort="61";
+    sort=GetQueryString("sort");
+    
+    var nk="";
+    nk=GetQueryString("p");
+    if(nk){
+      	    strs=nk.split(","); //字符分割 
+            n=strs[0];
+}
+    if (!n) n = "1^-1";
+    if (!c) c = "-1";
+    if (!d) d = "-1";
+    var k=null;
+    k=$("#txtInKey").val();
+    if(k=="职位太多？搜一下试试！"){
+            k="";    
+    }
+    if(2==1){
+       var shPg = "/social";
+     }else if(2==2){
+       var shPg = "/xyzp";
+     }else{
+       var shPg = "/intern";
+     }
+    
+    href = shPg + "?k=" + k + "&c=" + c + "&p=" + n  + "&day="+ d+"&sort="+sort + "&PageIndex=" + page;
+    href += "&class=2#tc";
+    window.location.href = href;
+}   
+</script>
+<script type="text/javascript">
+	  $(function(){
+	  	$('a.categoryConditions').change(function(){
+	  		$(this).addClass('now').siblings().removeClass('now');
+	  	});
+            $('a.citiesConditions').change(function(){
+	  		$(this).addClass('now').siblings().removeClass('now');
+	  	});
+	  })
+</script>
+      <script>
+$(function(){
+  
+$(".zwlxrm a").click(function(){
+	var num=$(".zwlxrm a").index($(this)) 
+	$(this).addClass("now")
+	$(this).siblings("a").removeClass("now")
+	$(".zwtr2m").eq(num).show()
+	$(".zwtr2m").eq(num).siblings(".zwtr2m").hide()
+	 })
+
+ 
+  //$(window).attr('location','http://www.jsxyzp.com/xyzp?k=&c=&p=1^56&day=-1&PageIndex=1&class=3&sort=57'); 
+	})
+ 
+
+</script>  <div class="qabg"><div class="wrap">
+ <div class="tc"><img src="../static/picture/111111_themes_江苏校园招聘网new_img_icon13a.png" alt=""></div>
+ <span class="title syicon6">申请流程</span>
+ <div class="pt50 pb40"><img src="../static/picture/111111_themes_江苏校园招聘网new_img_icon18a.png" alt=""></div>
+ <span class="title syicon7">常见问题</span>
+ <div class="qa">
+  <ul>
+   <li>Q1：招聘对象（毕业时间）</li>
+   <li>Q2：如何投递简历？</li>
+   <li>Q3：如何获取关于京东方及京东方校园招聘更多信息?</li>
+   <li>Q4：最多可以同时申请几个职位？申请提交后能否修改？</li>
+   <li>Q5：测评失效/没收到测评怎么办？ </li>
+   <li>Q6：为什么我投递的岗位与通知我面试的岗位不一致呢？</li>
+    <li>Q7：2021届校园招聘还会有线下面试吗？</li>
+    <li>Q8：远程视频面试需要注意什么呢？ </li>
+    <li>Q9：为什么我收不到通知呢？</li>
+    <li>Q10：关于内推</li>
+    <li>Q11：我还有其他问题可以联系谁呢？</li>
+    <li>Q12：提前批网申&面试截止日期？</li>
+    <li>Q13：如提前批已做过测评，正式批还需要再次进行测评吗？</li>
+    <li>Q14：如提前批没有收到面试通知或面试未通过，是否影响正式批招聘？</li>
+    <li>Q15：如想更换在8月27日（京东方2021校园招聘正式启动）前已投递的职位，如何操作呢？</li>
+  </ul>
+ </div><!--qa end-->
+</div></div> 
+ <div class="footer"><div class="footerm">
+ <div class="footerl">
+  <ul>
+   <li>
+    <h2>企业概览</h2>
+    <a href="javascript:;" target="_blank">公司介绍</a>
+    <a href="javascript:;" target="_blank">管理团队</a>
+    <a href="javascript:;" target="_blank">多媒体中心</a>
+   </li>
+   <li>
+    <h2>产品与服务</h2>
+    <a href="javascript:;" target="_blank">端口器件</a>
+    <a href="javascript:;" target="_blank">智慧物联</a>
+    <a href="javascript:;" target="_blank">智慧医工</a>
+   </li>
+   <li>
+    <h2>加入我们</h2>
+     <a href="../xyzp.html" target="_blank">校园招聘</a>
+     <a href="../User/Account/LogOut.html" target="_blank">社会招聘</a>
+     <a href="../User/Account/LogOut.html" target="_blank">Global Talent</a>
+   </li>
+   <li>
+    <h2>快速链接</h2>
+    <a href="javascript:;" target="_blank">江苏校园招聘网 Japan</a>
+    <a href="javascript:;" target="_blank">北京明德医院</a>
+    <a href="javascript:;" target="_blank">恒通国际创新园</a>
+   </li>
+   <div class="cb"></div>
+  </ul>
+ </div>
+ <div class="footerb">Copyright&nbsp;2019&nbsp;江苏校园招聘网 Inc. 保留所有权利。使用条款客户隐私政策</div>
+ <div class="cb"></div>
+</div></div><!--footer end-->
+<div class="float">
+ <ul>
+  <li class="hddb"><span class="icon15a"></span><div class="hddbtxt">回到<br>顶部</div></li>
+ <!-- <li class="wtfk"><span class="icon15b"></span><div class="wttxt">问题<br/>反馈</div><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_iocn16b.jpg" alt="" width="150"/></li>-->
+  <li class="gzwx2">
+    <span class="icon15c"></span><div class="wxtxt">关注<br>微信</div>
+    <div class="gzwxl">
+      <img src="../static/picture/111111_themes_江苏校园招聘网new_img_wbewm.jpg" alt="">
+      <p>微信公众号 江苏校园招聘网招聘</p>
+    </div>
+  </li>
+   <li class='sina'>
+     <a href="javascript:;" target="_blank" class="icon54"></a>
+      <div class="gzwxl">
+      <img src="../static/picture/111111_themes_江苏校园招聘网new_img_img54.png" alt="">
+      <p>新浪微博 京东方校园招聘</p>
+    </div>
+   </li>
+ <li><a href="../FS_WEB_CCS/mz_websocket.html" target="_blank" class="icon15b"></a><div class="wttxt"></div></li>
+
+ </ul>
+</div><!--float end-->
+  
+  
+ <!--弹出 开始-->
+
+    <div class="tcbg"></div>
+<div class="tcbox"><span class="icon4"></span>
+
+
+    <div class="tcxc">
+        <div class="tcxct">
+            <ul>
+                <li class="now"><span class="icon5">按日期查看</span></li>
+                <li><span class="icon6">按城市查看</span></li>
+                <div class="cb"></div>
+            </ul>
+        </div><!--tcxct end-->
+        <div class="cb pb30"></div>
+        <div class="tcxcb">
+            <div class="tcxcbm" style="display:block">
+                <div class="rql">
+                    <div class="rqlt">
+                        <span class="icon7a"></span>
+                        <div class="rqltm">
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <span class="icon7b"></span>
+                    </div><!--rqlt end-->
+                    <div class="rqlb">
+                        <div class="rqlbm" style="display:block">
+
+                        </div> <!--rqlbm end-->
+                    </div><!--rqlb end-->
+                </div><!--rql end-->
+                <div class="xcnr">
+                    <div class="xcnrt">
+                        <div class="xcnrtbox">
+
+                            <div class="xcnrtm xcnrtm1" style="display:block">
+
+                            </div>
+
+                        </div>
+                    </div><!--xcnrt end-->
+                    <p class="xcnrb">温馨提示：宣讲会时间地点可能会临时调整，请随时关注</p>
+                </div><!--xcnr end-->
+                <div class="cb"></div>
+            </div><!--日期查询结束-->
+
+            <div class="tcxcbm">
+                <div class="csl">
+
+
+                </div><!--csl end-->
+                <div class="xcnr">
+                    <div class="xcnrt">
+                        <div class="xcnrtbox">
+                            <div class="xcnrtm xcnrtm2" style="display:block">
+
+                            </div><!---->
+
+
+                        </div>
+                    </div><!--xcnrt end-->
+                    <p class="xcnrb">温馨提示：宣讲会时间地点可能会临时调整，请随时关注</p>
+                </div><!--xcnr end-->
+                <div class="cb"></div>
+            </div><!--城市查询结束-->
+        </div><!--tcxcb end-->
+    </div><!--tcxc end-->
+    <div class="zwxqtc">
+        <iframe src="" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" height="600" style="width:100%;" target="_blank"></iframe>
+    </div>
+
+
+</div><!--tcbox end-->
+
+
+
+     <div class="zwxqtc">
+  <iframe src="" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" height="600" style="width:100%;" target="_blank"></iframe>
+  </div>
+
+
+
+<!--tcbox end-->
+  
+   <div class="tcbox2"><div class="box2m"> 
+<div class="tcqa"><span class="icon4"></span>
+    <ul>
+     <li>
+      <h2>Q1：招聘对象（毕业时间）</h2>
+      <div class="tcqab">
+       <p>A1：2021届应届毕业生（毕业时间在2020年9月-2021年8月）。部分岗位可接受2020届学生，以面试通知为准。</p>
+      </div>
+     </li>
+     <li>
+      <h2>Q2：如何投递简历？</h2>
+      <div class="tcqab">
+       <p>A2：江苏校园招聘网校园招聘官网为本次校园招聘网申的唯一入口，建议使用PC端进行投递。江苏校园招聘网校园招聘官网网址：www.jsxyzp.com，进入官网后选择【业务板块】-【职位类别】-【工作城市】找到适合自己的岗位。</p>
+      </div>
+     </li>
+     <li>
+      <h2>Q3：如何获取关于京东方及京东方校园招聘更多信息？</h2>
+      <div class="tcqab">
+        <p>A3：各位同学可以通过以下方式获取京东方及京东方校园招聘相关的第一手资讯：<br>公司咨询：微信公众号-京东方（江苏校园招聘网）；公司门户-www.江苏校园招聘网.com<br>招聘信息：微信公众号-江苏校园招聘网招聘；微博-京东方校园招聘；江苏校园招聘网校园招聘官网-www.jsxyzp.com</p>
+      </div>
+     </li>
+        <li>
+      <h2>Q4：最多可以同时申请几个职位？申请提交后能否修改？</h2>
+      <div class="tcqab">
+       <p>A4：每人只可以申请一个职位，且申请提交后不能再投递其他职位，但投递成功后仍然可以更新简历，请同学们认真考虑后再做选择（进入江苏校园招聘网校园招聘官网：www.jsxyzp.com登录自己的账号，进入【个人中心】-【我的简历】即可进行简历更新）。</p>
+      </div>
+     </li>
+
+     <li>
+      <h2>Q5：测评失效/没收到测评怎么办？ </h2>
+      <div class="tcqab">
+       <p>A5：测评有效期3天，请在有效期内完成。如链接失效/没收到测评，请访问江苏校园招聘网校园招聘官网：www.jsxyzp.com中最下方“常见问题”栏目中的Q11，将姓名、电话发送到指定邮箱并说明原因。测评会影响面试结果，请大家务必在规定时间内认真作答。</p>
+      </div>
+     </li>
+       <li>
+      <h2>Q6：为什么我投递的岗位与通知我面试的岗位不一致呢？</h2>
+      <div class="tcqab">
+       <p>A6:我们会优先推荐第一志愿岗位，如简历未通过第一志愿岗位筛选时会被调剂到第二志愿或相似岗位，面试通知会提前发放，如不想参加调剂岗位的面试，可直接拒绝。</p>
+      </div>
+     </li>
+       <li>
+      <h2>Q7：2021届校园招聘还会有线下面试吗？</h2>
+      <div class="tcqab">
+       <p>A7：结合疫情现状及各地政策要求，为保障同学们的安全，校园招聘将以无接触远程视频面试为主。另外，结合部分城市及高校的疫情防控政策，公司将根据各高校简历量与老师协调安排进校面试。所有面试通知将以短信和邮件形式进行发放，请大家注意查收。</p>
+      </div>
+     </li>
+
+
+        <li>
+      <h2>Q8：远程视频面试需要注意什么呢？</h2>
+      <div class="tcqab">
+        <p>A8：温馨提示，建议在光线充足、安静的环境下参加面试。<br>
+摄像头：视频面试须全程开启摄像头功能，请提前准备好带有摄像功能的电脑；<br>
+耳机：为保证交流过程音质清晰不受干扰，建议提前准备好耳机；<br>
+电脑和网络要求：面试中请关闭其他应用，尽量选择网络状况良好的环境进行。</p>
+      </div>
+     </li>
+        <li>
+      <h2>Q9：为什么我收不到通知呢？</h2>
+      <div class="tcqab">
+       <p>A9：联系方式是非常重要的信息！为了避免同学们收不到笔试面试通知，建议大家网申时一定要确认好自己的手机号、邮箱等信息是无误的。如联系方式有误，请访问江苏校园招聘网校园招聘官网：www.jsxyzp.com中最下方“常见问题”栏目中的Q11，将姓名、电话发送到指定邮箱并说明原因。</p>
+      </div>
+     </li>
+      <li>
+      <h2>Q10：关于内推</h2>
+      <div class="tcqab">
+       <p>A10：同学们可以找到已入职京东方的学长学姐帮忙内推，详细操作可在【江苏校园招聘网招聘】微信公众号【校园招聘-内部推荐】栏目查找，直播环节也会放送大量内推码哦！通过内推渠道投递简历的同学，同等条件优先面试。</p>
+      </div>
+     </li>
+
+     <li>
+      <h2>Q11我还有其他问题可以联系谁呢？</h2>
+      <div class="tcqab">
+       <p>如有更多问题，可于登录江苏校园招聘网校招官网www.jsxyzp.com询问自助问答小助手，如问题不能得到解决，也可给工作人员发送邮件（不接收简历，信息只以网申为主），工作人员处理到后会第一时间回复的~耐心等候哦！联系邮箱见下面表格：</p>
+        <div class="tcqabtab">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <th align="center" width="55%">学校所在城市或地区</th>
+      <th align="center" width="45%">联系邮箱</th>
+    </tr>
+    <tr>
+      <td align="left">哈尔滨、长春、大连、沈阳、秦皇岛、延吉</td>
+      <td align="left">刘经理：liujiajun@江苏校园招聘网.com.cn</td>
+    </tr>
+    <tr>
+      <td align="left">北京、天津、济南、青岛、威海、保定、石家庄</td>
+      <td align="left">马经理：majiani@江苏校园招聘网.com.cn</td>
+    </tr>
+    <tr>
+      <td align="left">西安、长沙、太原、郑州、兰州、呼和浩特、包头、乌鲁木齐、石河子</td>
+      <td align="left">荆经理：jingshuang@江苏校园招聘网.com.cn</td>
+    </tr>
+    <tr>
+      <td align="left">合肥、武汉、南京、徐州、上海、宣城、无锡、常州、苏州</td>
+      <td align="left">何经理：hejia_b17@江苏校园招聘网.com.cn</td>
+    </tr>
+    <tr>
+      <td align="left">广州、杭州、厦门、福州、南昌、南宁、海口</td>
+      <td align="left">高经理：gaozhuonan@江苏校园招聘网.com.cn</td>
+    </tr>
+     <tr>
+      <td align="left">成都、重庆、昆明、雅安、贵阳、西宁</td>
+      <td align="left">侯经理：houbin@江苏校园招聘网.com.cn</td>
+    </tr>
+    <tr>
+      <td align="left">中国香港、中国台湾、美国、英国、德国、俄罗斯、法国、日本、韩国、新加坡、印度、印度尼西亚、阿联酋、巴西等</td>
+      <td align="left">荆经理：jingshuang@江苏校园招聘网.com.cn</td>
+    </tr>
+
+
+
+  </table>
+</div>
+        
+        
+      </div>
+     </li>
+     <li>
+      <h2>Q12：提前批网申&面试截止日期？</h2>
+      <div class="tcqab">
+       <p>A12：京东方2021校招提前批网申截至8月1日，面试流程已于8月15日全部结束。8月1日后网申将视为正式批次，面试流程同正式批次。</p>
+      </div>
+     </li>
+     <li>
+      <h2>Q13：如提前批已做过测评，正式批还需要再次进行测评吗？</h2>
+      <div class="tcqab">
+       <p>A13：不需要再次测评。</p>
+      </div>
+     </li>
+     <li>
+      <h2>Q14：如提前批没有收到面试通知或面试未通过，是否影响正式批招聘？</h2>
+      <div class="tcqab">
+       <p>A14：不影响2021届正式批招聘。未通过提前批的候选人会自动进入正式批次，无需重新投递简历。</p>
+      </div>
+     </li>
+     <li>
+      <h2>Q15：如想更换在8月27日（京东方2021校园招聘正式启动）前已投递的职位，如何操作呢？</h2>
+      <div class="tcqab">
+       <p>A15：每人只可申请一个职位，且申请提交后一个月内不能更换投递其他职位，一个月后方可再次投递。如仍有疑问，请访问江苏校园招聘网校园招聘官网：www.jsxyzp.com中最下方“常见问题”栏目中的Q11，将姓名、电话发送到指定邮箱并说明原因。</p>
+      </div>
+     </li>
+    </ul>
+  </div><!--tcqa end-->
+</div></div><!--tcbox2 end-->
+   
+</body>
+</html>
+<script type="text/javascript">
+        require([
+            vstr('${st}/${version}/cmsportal/skin/js/baiduStatistics.js')
+
+		]);
+    </script><script type="text/javascript">
+    $(function(){
+    _splash('zhiye_contentpage',0,102010,'new_zhiye_com');
+    });
+    </script>

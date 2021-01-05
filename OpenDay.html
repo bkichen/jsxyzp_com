@@ -1,0 +1,657 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<link type="text/css" rel="stylesheet" href="static/css/frontmodule.css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_global-0.1..css" front="css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_style0901-0.css" front="css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_swiper-0.1..css" front="css">
+<script type="text/javascript">
+       //mobileUrl rewrite
+       function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          var appSrcMetas = document.getElementsByName('mobileUrl');
+			      if(appSrcMetas.length > 0) {
+		       		  window.location.href = appSrcMetas[0].getAttribute("content");
+			      }
+		    }
+		  }
+      goPAGE();
+
+       //opsapi
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//'+document.location.host+'/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script>
+<script type="text/javascript" src="static/js/111111_themes_江苏校园招聘网new_bsbase-0.1..js"></script>
+<script type="text/javascript" src="static/js/111111_themes_江苏校园招聘网new_swiper45-0..js"></script>
+<script type="text/javascript">var $bs_vars={'st':'//stc.beisen.com/','version':'2020.11.09.001','constSite':'//const.italent.cn'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script><!--引用静态文件:requirejs-->
+<script type="text/javascript" src="static/js/require.js"></script>
+<title>江苏校园招聘网-江苏招聘网-OpenDay</title>
+  
+<script>
+$(function(){
+$('.hddb').click(function () {
+                $('body,html').stop().animate({
+                    'scrollTop': 0,
+                    'duration': 100,
+                    'easing': 'ease-in'
+                })
+            });
+  $(".zwss_input").focus(function() {
+                if ($(this).val() == "职位太多？搜一下试试！"){
+                    $(this).val("");
+					$(this).addClass("col333")
+               }
+            })
+   $(".zwss_input").blur(function() { 
+            if ($(this).val() == "") {
+                    $(this).val("职位太多？搜一下试试！"); 
+					$(this).removeClass("col333")
+                }
+            })
+$(".zwlb li a").click(function(){
+		url=$(this).attr("data");
+		$(".tcbg").fadeIn()
+		$(".tcbox").fadeIn()
+		$(".zwxqtc").slideDown()
+          $('iframe').attr('src',url);
+		})
+$(".icon4").click(function(){		
+		$(".zwxqtc").slideUp()
+                 // $(".tcwd").slideUp()
+		//$(".tcxc").slideUp()
+		$(".tcbox,.tcbox2").fadeOut()
+		$(".tcbg").fadeOut()
+		}) 
+	var shgyt = new Swiper('.shgyt',{
+		navigation: {
+		  nextEl: '.sxsicon6a',
+		  prevEl: '.sxsicon6b',
+		},  
+		loop:true,
+      loopedSlides:3,
+		})
+            /**var shgybm = new Swiper('.shgybm',{
+		 slidesPerView: 3,
+		 spaceBetween : 25,
+          // centeredSlides: true,
+		 touchRatio: 0.2,
+      slideToClickedSlide: true,
+	  loop:true,
+      loopedSlides: 3,
+		
+		})	
+   shgyt.controller.control = shgybm;
+  shgybm.controller.control = shgyt;**/
+	   
+	})	
+ 
+
+</script>
+	<style type="text/css">
+          
+			a.gwr,.nav a:hover, .nav a.now{color:#00a9e5}
+	.sqsxs li h2{ background: #6fcf88 }
+	.sqsxs li:nth-child(2) h2{ background: #00a9e5 }
+	.zwss_btn{background: url(static/image/111111_themes_江苏校园招聘网new_img_icon12.png) no-repeat center center #00a9e5;}
+	.zwlxrm2 a.now{background: #00a9e5}
+	.zwqb a{    background: url(static/image/111111_themes_江苏校园招聘网new_img_dsicon3.png) no-repeat left center!important;}
+	.shgytl h2 span{color: #00a9e5}
+	.shgy{height: 590px}
+	.shgytr{width: 350px;height: 350px;padding: 0 30px 40px 0}
+	.shgytr img{width: 350px;height: 350px;}
+	.shgytr span{width: 350px;height: 350px;top: 30px;}
+	.shgyb{top: 450px;width: 410px}
+	.shgybm{width: 350px;height: 100px}
+	.shgybm .swiper-slide-active img{border:none;}
+    .sxjlb li{color: #00a9e5}
+	.sxjlb li:nth-child(1),.sxjlb li:nth-child(3){padding-left: 50px;background: url(static/image/111111_themes_江苏校园招聘网new_img_icon51b.png) no-repeat 35px center;}
+	.sxjlb li:nth-child(2n) {background: url(static/image/111111_themes_江苏校园招聘网new_img_icon51b.png) no-repeat 30px center!important;}
+  .sxsicon6a,.sxsicon6b{top: 50%; margin-top: -22.5px}
+  /****/
+  .sxjl img{box-shadow: 0 5px 15px rgba(96,121,247,0.35); border-radius: 50%}
+.page a:hover,.page a.now{ background:#00a9e5; border:1px solid #00a9e5}
+.page a.next{ border:1px solid #00a9e5; color:#00a9e5; }
+.jchg{background: #f1f9ff;padding: 45px 0 60px}
+.jchg h2{text-align: center;line-height: 50px; color: #333;font-size: 30px;}
+.jchg p{text-align: center;line-height: 30px; color: #999;font-size: 16px;}
+
+#certify {position: relative;width: 1200px;margin: 0 auto; overflow: hidden;}
+#certify .swiper-container {padding-bottom: 20px;}
+#certify  .swiper-slide { position: relative;width: 700px;height: 450px;}
+.jchxt{position: relative; box-shadow: 0 0 15px rgba(0,0,0,0.1)}
+.jchxt img{vertical-align: top; position: relative;z-index: 1}
+.jchgb{ text-align: center; z-index: 10; }
+.jchgb .swiper-pagination-bullet{border-radius: 50%!important;background: #d2d2d2!important; border:none;width: 14px!important; height: 14px!important; opacity: 1!important; display: inline-block!important;margin: 0 6px!important}
+.jchgb .swiper-pagination-bullet-active{ background: #00a9e5!important}
+.jchgl{display: inline-block;color: #fff;font-size: 60px; position: absolute;width: 35px;height: 60px; line-height: 60px; text-align: center;left: 20px; top: 50%; margin-top: -40px; cursor: pointer; z-index: 10; font-family: '宋体'; outline: none; font-weight: bold;}
+.jchgr{display: inline-block;color: #fff;font-size: 60px; position: absolute;width: 35px;height: 60px; line-height: 60px; text-align: center;right: 20px; top: 50%; margin-top: -40px; cursor: pointer; z-index: 10; font-family: '宋体'; outline: none; font-weight: bold;}
+
+	  .sxjl img{box-shadow: 0 5px 15px rgba(96,121,247,0.35); border-radius: 50%}
+          .sina {display: block;}
+          .flex-nowrap{
+		  flex-wrap:nowrap;
+		}
+		.flex-wrap{
+		  flex-wrap: wrap;
+		}
+		
+		.flex-center{
+		  display: flex;
+		  justify-content:center;
+		}
+		.flex-between{
+		  display: flex;
+		  justify-content: space-between;
+		}
+		.flex-start{
+		  display: flex;
+		  justify-content:flex-start;
+		}
+		.flex-end{
+		  display: flex;
+		  justify-content:flex-end;
+		}
+		.flex-column{
+		  display: flex;
+		  flex-direction:column;
+		  justify-content:center;
+		}
+		.align-center{
+		  align-items: center;
+		}
+		.align-start{
+		  align-items: flex-start;
+		}
+		.align-end{
+		  align-items: flex-end;
+		}
+		.hidden-text{
+		  white-space:nowrap;
+		  overflow:hidden;
+		  text-overflow:ellipsis;
+		}
+		.hidden-two{
+		  overflow:hidden;
+		  text-overflow:ellipsis;
+		  display:-webkit-box;
+		  -webkit-box-orient:vertical;
+		  -webkit-line-clamp:2;
+		}
+		.hidden-three{
+		  overflow:hidden;
+		  text-overflow:ellipsis;
+		  display:-webkit-box;
+		  -webkit-box-orient:vertical;
+		  -webkit-line-clamp:3;
+		}
+		.qycg{background: #f1f9ff; padding: 25px 0; text-align: center;border-radius: 75px;}
+		.qycgm{width: 100px;height: 100px; border-radius: 50%; margin: 0 50px;}
+		.qycgm span{display: inline-block;padding: 40px 0 0; color: #fff;color: #fff;font-size: 14px;}
+		.iconlan{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconlan.png) no-repeat center center; box-shadow: 0 10px 20px rgba(8,173,231,0.33);}
+		.iconhuan{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconhua.png) no-repeat center center; box-shadow: 0 10px 20px rgba(255,181,7,0.33);}
+		.iconqycg{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconqyc.png) no-repeat center top;}
+		.iconkcpx{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconkcp.png) no-repeat center top;}
+		.iconywjl{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconywj.png) no-repeat center top;}
+		.iconhdty{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconhdt.png) no-repeat center top;}
+		.iconmnms{background: url(static/image/111111_themes_江苏校园招聘网new_img_iconmnm.png) no-repeat center top;}
+          
+</style>
+</head>
+
+<body>
+ 
+<style type="text/css">
+    .isLogin,.unLogin {
+        display:inline-block;
+        vertical-align: top;
+    }
+  .nav a{margin:0 38px}
+</style>  
+<div class="header">
+  <span class="logo"><a href="index1.html" target="_blank" class="gw"></a>
+    <a href="javascript:;" target="_blank" class="gw b f26" style="
+    color: #000;
+    width: 105px;
+    margin: 0;
+    vertical-align: middle;
+">加入我们</a><img src="static/picture/111111_themes_江苏校园招聘网new_images_nav.png" style="
+    vertical-align: middle;
+"><a href="xyzp.html" class="gwr" style="
+    vertical-align: middle;
+">校园招聘</a></span>
+  <div class="headerr">
+    <div class="isLogin" style="display:none">
+              <a href="Portal/Account/Login-http2f2fwww.jsxyzp.com2fPo.html">个人中心</a>
+              <a href="User/Account/LogOut.html">退出</a>
+          </div>
+          <div class="unLogin" style="display:none">
+                  <a href="Portal/Account/Login-2FOpenDay.html">登录</a>
+                  <a href="Portal/Account/Register-2FOpenDay.html">注册</a>
+    </div>
+    <span></span></div>
+  <div class="cb"></div>
+ </div><!--header end-->
+ <div class="navbg"><div class="nav">
+  <a href="xyzp.html" class=''>校园招聘</a>
+   <a href="intern.html" class=''>实习生</a>
+   <a href="" class='now'>OpenDay</a>
+   <!--<a href="/jlbjs" class=''>校园俱乐部</a>-->
+   <a href="" class=''>校园俱乐部</a>
+   <a href="challenges.html" class=''>江苏校园招聘网创新挑战赛</a>
+   <a href="javascript:;" class=''>江苏校园招聘网营销挑战赛</a>
+   <a href="qzbd.html" class=''>求职宝典</a>
+ </div></div><!--navbg end-->
+<script type="text/javascript">
+    var makeUserInfo = function (resp) {
+        var userInfo = {};
+        //userInfo.name = resp.Model.Email;
+        userInfo.isLogin = resp.Success;
+        return userInfo;
+    }
+    
+    $.ajax({
+        url: '/User/Account/GetUserLoginInfo?v=' + Math.random()
+        , data: {}
+        , cache: false
+        , type: 'post'
+        , success: function (resp) {
+            //配置用户基本信息
+            var userInfo = makeUserInfo(resp);
+            var loginView = $(".header .isLogin");
+            var unLoginView = $(".header .unLogin");
+            if (userInfo.isLogin) {
+                loginView.show()
+            }
+            else {
+                unLoginView.show()
+            }
+            
+        }//success
+        , error: function () {
+            throw new Error('ERROR: get user info')
+        }
+    });//ajax    });//ajax   
+
+</script>
+   <div class="sxsbanner"><img src="static/picture/111111_themes_江苏校园招聘网new_img_img50b.jpeg" alt=""></div>
+<div class="sxs"><div class="sxsbox">
+ <div class="sxst">
+ 	
+
+
+   <h2 class="pt25 f20 b" style="color:#00a9e5;">百闻不如一见，我们助你实现<div></div></h2>
+
+   <p style='margin-top:-25px'><b style="color:#6357b1;font-size:20px;opacity:0;">&nbsp;</b><br>疫情分割距离，阻止不了相遇<br>
+为了遇见你，全新的2020 云线上OpenDay<br>
+我们再次启程，为你量身打造<br>
+感受黑科技、学习新知识、看行业动态、参加线上面试，拿心仪offer<br>
+今年夏天，与你相伴！</p>
+  
+
+   
+ </div><!--sxst end-->
+
+ <div class="qycg flex-center align-center">
+		<div class="qycgm iconlan flex-center align-center"><span class="iconqycg">企业参观</span></div>
+		<div class="qycgm iconhuan flex-center align-center"><span class="iconkcpx">课程培训</span></div>
+		<div class="qycgm iconlan flex-center align-center"><span class="iconywjl">业务交流</span></div>
+		<div class="qycgm iconhuan flex-center align-center"><span class="iconhdty">互动体验</span></div>
+		<div class="qycgm iconlan flex-center align-center"><span class="iconmnms">模拟面试</span></div>
+		
+	</div><!--qycg end-->
+  <div class="sxjlb" style='padding-left:85px'>
+  <ul>
+   <li>360°参观京东方展厅，深度了解</li>
+   <li>简历点评+在线答疑，给你最实用的求职干货</li>
+   <li>来自业内大咖的倾情分享，了解国际第一手资讯</li>
+   <li>才华横溢的你更有机会拿到2021届录用意向书</li>
+   <div class="cb"></div>
+  </ul>
+ </div><!--sxjlb end-->
+</div></div><!--sxs end--> 
+<div class="bmsq"><div class="wrap">
+ <div class="tc pb40" id="tc"><img src="static/picture/111111_themes_江苏校园招聘网new_img_icon52d.png" alt=""></div>
+
+ <div class="zwt">
+  <ul>
+ 
+   <li>
+    <div class="zwtl" style="background:#00a9e5;">活动城市：</div>
+     <div class="zwqb">                   <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="-1" style="    line-height: 50px;">全部</a>
+ </div>
+     <div class="zwlxr">
+      <div class="zwlxrm zwlxrm2">
+               <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="1100">北京</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5101">成都</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5000">重庆</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5107">绵阳</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4201">武汉</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3401">合肥</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3501">福州</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="1506">鄂尔多斯</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="1310">固安</a>
+                      <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="5301">昆明</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="3205">苏州</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4416">河源</a>
+                     <a href='javascript:void(0)' onclick="checkCity(this)" class="citiesConditions " value="4403">深圳</a>
+       <!--<a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions now" value="1100">北京</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5101">成都</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5000">重庆</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5107">绵阳</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="4201">武汉</a>  
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5101">成都</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5000">重庆</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="5107">绵阳</a>
+       <a href="javascript:void(0)" onclick="checkCity(this)" class="citiesConditions " value="4201">武汉</a>  -->
+     </div>
+     </div>
+    <div class="cb"></div>
+   </li>
+
+  </ul>
+ </div><!--zwt end-->
+ <div class="cb pb45"></div>
+ <div class="zwlb"><!--<span class="zwlbline"></span>-->
+  <ul>
+    <!--<li><a href="javascript:void()" data="/zwxq?jobId=880014694">夏令营（北京）(J17565)</a></li>-->
+    <li>
+     <a href="javascript:void()" data="/bmxq?jobId=880037263">2021合肥地区OpenDay(J25608)</a>
+      <b class=" "></b>
+      
+      <!--<span>2020-12-18</span>-->
+    </li>
+   <div class="cb"></div>
+  </ul>
+ </div><!--zwlb end-->
+ 
+<!--page end-->
+</div></div><!--bmsq end-->
+<script>
+ $(function(){
+
+   
+   $(".icon20").click(function(){
+           $(this).toggleClass("icon20now")
+           $(this).siblings(".skeyboxmm").toggleClass("skeyboxmmnow")
+           })
+     /* $(".zwrb tr:odd").css("background","#f1f4fc")*/
+
+         })
+ 
+</script>               
+<script>  
+  function checkCategory(obj){         
+    $(obj).siblings().removeClass("now");
+    $(obj).addClass("now");
+     sch();    
+  }
+  
+  function checkCity(obj){
+      $(obj).addClass("now");     
+      var ech=  $(obj).siblings();
+      ech.removeClass("now");    
+      sch();    
+  }
+
+  function checkTime(obj){      
+     $(obj).siblings().removeClass("now");        
+      $(obj).addClass("now");
+     sch();    
+  }
+  
+    $(function(){                     
+      $(".zwss_btn").click(function(){
+	 sch();
+	});							
+  });
+$('#txtInKey').bind('keypress',function(event){
+    if(event.keyCode == "13")    
+    {
+     sch();
+    }
+});
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+  function sch() {
+    var page=1;
+    var href = "";
+    var c = null;
+    var la = $("a.citiesConditions");
+    la.each(function() {
+
+        if ($(this).attr("class").indexOf("now")!=-1) {
+
+            c = $(this).attr("value");
+            return false;
+        }
+    });
+    var n = null;
+    //la = $(".categoryConditions");
+    //la.each(function() {
+
+    //if ($(this).attr("class").indexOf("now")!=-1) {
+
+    // n = $(this).attr("value");
+    //return false;
+    // }
+    // });
+    var d = null;
+/*d = $("a.timeConditions");
+    d.each(function() {
+        if ($(this).attr("class").indexOf('now')!=-1) {
+            d = $(this).attr('value');
+            return false;
+        }
+});  */  
+    
+    /* nk=GetQueryString("p");    
+    if(nk){
+      	    strs=nk.split(","); //字符分割 
+            n=strs[0]+","+n;
+    }else{
+            n=","+n;
+}*/
+    if (!n) n = "1^-1";
+    if (!c) c = "-1";
+    if (!d) d = "-1";
+    var k=null;
+    k=$("#txtInKey").val();
+    if(k=="职位太多？搜一下试试！"){
+            k="";    
+    }
+    if(6==1){
+       var shPg = "/social";
+     }else if(6==2){
+       var shPg = "/xyzp";
+	}else if(6==6){
+       var shPg = "/openday";
+     }else{
+       var shPg = "/sxszp";
+     }
+    
+    //href = shPg + "?k=" + k + "&c=" + c + "&p=" + n  + "&day="+ d + "&PageIndex=" + page;
+    href = shPg + "?k=" + "&c=" + c + "&p=" + n  + "&day="+ d + "&PageIndex=" + page;
+    href += "&class=6#tc";
+    window.location.href = href;
+}   
+</script>
+<script type="text/javascript">
+	  $(function(){
+            //$('a.categoryConditions').change(function(){
+            //$(this).addClass('now').siblings().removeClass('now');
+            //});
+            $('a.citiesConditions').change(function(){
+	  		$(this).addClass('now').siblings().removeClass('now');
+	  	});
+	  })
+</script>  <div class="jchg">
+	<h2>历年精彩回顾</h2>
+	<p class="pb35">加入我们，有江苏校园招聘网的地方，就有属于你的机会</p>
+	<div id="certify" class=" wow fadeInUp"><span class="jchgl">&lt;</span><span class="jchgr">&gt;</span>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><div class="jchxt"><img src="static/picture/111111_themes_江苏校园招聘网new_img_dayimg1.jpg"></div></div><!---->
+				<div class="swiper-slide"><div class="jchxt"><img src="static/picture/111111_themes_江苏校园招聘网new_img_dayimg2.jpg"></div></div><!---->
+				<div class="swiper-slide"><div class="jchxt"><img src="static/picture/111111_themes_江苏校园招聘网new_img_dayimg3.jpg"></div></div><!---->
+				<div class="swiper-slide"><div class="jchxt"><img src="static/picture/111111_themes_江苏校园招聘网new_img_dayimg4.jpg"></div></div><!---->
+				<div class="swiper-slide"><div class="jchxt"><img src="static/picture/111111_themes_江苏校园招聘网new_img_dayimg5.jpg"></div></div><!---->
+			</div>
+		</div>
+	</div><!---->
+	<div class="jchgb"></div>
+</div><!--jchg end-->
+<script>
+certifySwiper = new Swiper('#certify .swiper-container', {
+	watchSlidesProgress: true,
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	loop: true,
+	loopedSlides: 3,
+	autoplay: true,
+	navigation: {
+		nextEl: '.jchgr',
+		prevEl: '.jchgl',
+	},
+	pagination: {
+		el: '.jchgb',
+		clickable :true,
+	},
+	on: {
+		progress: function(progress) {
+			for (i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i);
+				var slideProgress = this.slides[i].progress;
+				modify = 1;
+				if (Math.abs(slideProgress) > 1) {
+					modify = (Math.abs(slideProgress) - 1) * 0.7 + 1;
+				}
+				translate = slideProgress * modify * 200 + 'px';
+				scale = 1 - Math.abs(slideProgress) / 2.5;
+				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+				slide.css('zIndex', zIndex);
+				slide.css('opacity', 1);
+				if (Math.abs(slideProgress) > 3) {
+					slide.css('opacity', 0);
+				}
+			}
+		},
+		setTransition: function(transition) {
+			for (var i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i)
+				slide.transition(transition);
+			}
+
+		}
+	}
+
+})
+</script>
+ <div class="footer"><div class="footerm">
+ <div class="footerl">
+  <ul>
+   <li>
+    <h2>企业概览</h2>
+    <a href="javascript:;" target="_blank">公司介绍</a>
+    <a href="javascript:;" target="_blank">管理团队</a>
+    <a href="javascript:;" target="_blank">多媒体中心</a>
+   </li>
+   <li>
+    <h2>产品与服务</h2>
+    <a href="javascript:;" target="_blank">端口器件</a>
+    <a href="javascript:;" target="_blank">智慧物联</a>
+    <a href="javascript:;" target="_blank">智慧医工</a>
+   </li>
+   <li>
+    <h2>加入我们</h2>
+     <a href="xyzp.html" target="_blank">校园招聘</a>
+     <a href="User/Account/LogOut.html" target="_blank">社会招聘</a>
+     <a href="User/Account/LogOut.html" target="_blank">Global Talent</a>
+   </li>
+   <li>
+    <h2>快速链接</h2>
+    <a href="javascript:;" target="_blank">江苏校园招聘网 Japan</a>
+    <a href="javascript:;" target="_blank">北京明德医院</a>
+    <a href="javascript:;" target="_blank">恒通国际创新园</a>
+   </li>
+   <div class="cb"></div>
+  </ul>
+ </div>
+ <div class="footerb">Copyright&nbsp;2019&nbsp;江苏校园招聘网 Inc. 保留所有权利。使用条款客户隐私政策</div>
+ <div class="cb"></div>
+</div></div><!--footer end-->
+<div class="float">
+ <ul>
+  <li class="hddb"><span class="icon15a"></span><div class="hddbtxt">回到<br>顶部</div></li>
+ <!-- <li class="wtfk"><span class="icon15b"></span><div class="wttxt">问题<br/>反馈</div><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_iocn16b.jpg" alt="" width="150"/></li>-->
+  <li class="gzwx2">
+    <span class="icon15c"></span><div class="wxtxt">关注<br>微信</div>
+    <div class="gzwxl">
+      <img src="static/picture/111111_themes_江苏校园招聘网new_img_wbewm.jpg" alt="">
+      <p>微信公众号 江苏校园招聘网招聘</p>
+    </div>
+  </li>
+   <li class='sina'>
+     <a href="javascript:;" target="_blank" class="icon54"></a>
+      <div class="gzwxl">
+      <img src="static/picture/111111_themes_江苏校园招聘网new_img_img54.png" alt="">
+      <p>新浪微博 京东方校园招聘</p>
+    </div>
+   </li>
+ <li><a href="FS_WEB_CCS/mz_websocket.html" target="_blank" class="icon15b"></a><div class="wttxt"></div></li>
+
+ </ul>
+</div><!--float end-->
+  
+  
+ <!--弹出 开始-->
+
+
+      <div class="tcbg"></div>
+ <div class="tcbox"><span class="icon4"></span>
+  <div class="zwxqtc">
+  <iframe src="" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" height="600" style="width:100%;" target="_blank"></iframe>
+  </div><!--zwxqtc end-->
+ </div><!--tcbox end-->
+  
+
+   
+</body>
+</html>
+<script type="text/javascript">
+        require([
+            vstr('${st}/${version}/cmsportal/skin/js/baiduStatistics.js')
+
+		]);
+    </script><script type="text/javascript">
+    $(function(){
+    _splash('zhiye_contentpage',0,102010,'new_zhiye_com');
+    });
+    </script>

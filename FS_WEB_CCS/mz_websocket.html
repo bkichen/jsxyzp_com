@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>在线问答-江苏校园招聘网招聘</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge=10,chrome=1">
+<!-- easyui css  -->
+<link rel="stylesheet" type="text/css" href="../static/css/icon-21080302.css">
+<link rel="stylesheet" href="../static/css/easyui.css">
+<link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../static/css/contactUs-21080420.css" rel="stylesheet" type="text/css">
+<!--1、jquery库  -->
+<script type="text/javascript" src="../static/js/jquery-1.9.1.min.js"></script>
+<!--<script type="text/javascript" src="./js/jquery.min.js"></script>-->
+<!--2、easyui.js  -->
+<script src="../static/js/jquery.easyui.min.js"></script>
+<script src="../static/js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../static/js/datagrid-detailview.js" ></script>
+<!--3、jquery.mobile插件  -->
+<link rel="stylesheet" type="text/css" href="../static/css/mz_style-20190725.css">
+<!--4、bootstrap插件  -->
+<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/adaptive-21080302.js"></script>
+<script src="../static/js/prevview-21080302.js" type="text/javascript" ></script>
+<script src="../static/js/getQueryString-21080302.js" type="text/javascript" ></script>
+<!--<script src="js/hotkeys.min.js"></script>-->
+<script src="../static/js/datetime-210803021.js"></script>
+<script src="../static/js/json2-21080302.js"></script>
+<script src="../static/js/mz_exp-2108053001.js"></script>
+<script src="../static/js/amrnb-21080302.js"></script>
+<script src="../static/js/amr-21080302.js"></script>
+<script src="../static/js/alertLog-210803021.js"></script>
+<script src="../static/js/datetime-210803021.js"></script>
+<script src="../static/js/layer.js"></script>
+<script src="../static/js/iealert-2108062808.js"></script>
+<!--iframe移植-->
+<script>
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+	//wap
+	var url_workno = getQueryString('workno');
+	if(url_workno==null){
+		url_workno = localStorage.getItem("workno");
+	}
+    window.location.href = "./app_websocket.html?workno=" + url_workno;//路劲根据实际需求配置
+} else {
+	//pc
+}
+</script>
+<style>
+.gh {
+	float: left;
+	text-align: left;
+	margin-left: 15px;
+	color: #777;
+}
+
+#title {
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+	font-weight: 600;
+}
+
+.upload #file {
+	cursor: pointer;
+}
+
+.m-message .text {
+	background-color: #eee;
+}
+
+#closebtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 22px;
+	text-align: center;
+	border: 1px solid #ccc;
+	height: 22px;
+	line-height: 20px;
+	display: block;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+	color: #444;
+}
+
+.zzt-bg {
+	width: 300px;
+	background-color: #fff;
+	margin: 0 auto;
+	height: 288px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -144px;
+	border-radius: 18px;
+	padding: 15px;
+}
+
+.form-box {
+	position: relative;
+	margin: 5px 0;
+}
+
+.form-box label {
+	width: 80px;
+	float: left;
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: right;
+	height: 28px;
+	line-height: 28px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+			width: 22px;
+			height: 24px;
+			margin-top: -22px;
+			z-index: 10;
+			cursor: pointer;
+			-moz-background-size: 22px 24px;
+			-webkit-background-size: 22px 24px;
+			background-size: 22px 24px;
+		}
+		.swiper-button-next, .swiper-button-prev{
+			top:45%;
+		}
+		.show ul li{
+			margin: 16px 0;
+		}
+	.panel{border: 1px solid #95B8E7}
+	.panel-title{font-size:14px;}
+	.messager-body{padding:10px;}
+	body{ background-color:#f5f5f5;}
+</style>
+<script type="text/javascript">
+$(function () {
+    var Sys = {};
+    var ua = navigator.userAgent.toLowerCase();
+    var s;
+    (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
+    (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+    (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+    (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+    (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+    (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+    if (Sys.ie){
+		if(Sys.ie<11.0){
+			$("body").iealert();//IE给用户提示
+		}
+	}
+  
+});
+	$(document).ready(function() {
+		$('#moreparams').hide();
+
+		$('#captureselectSize').click(function() {
+			var autoFlag = $("#captureselectSize").attr("checked") == "checked" ? 1 : 0;
+			if (autoFlag == 1) {
+				$('#moreparams').show();
+			} else {
+				$('#moreparams').hide();
+			}
+		});
+		$('#getimagefromclipboard').click(function() {
+			$('#posdetail').hide();
+		});
+		$('#showprewindow').click(function() {
+			$('#posdetail').hide();
+		});
+		$('#fullscreen').click(function() {
+			$('#posdetail').hide();
+		});
+		$('#specificarea').click(function() {
+			$('#posdetail').show();
+		});
+
+		$('#showprewindow').click();
+		$('#autoupload').click();
+		//		$('#btnUpload').hide();
+		$('#previewImg').hide();
+
+		Init();
+	})
+</script>
+</head>
+
+<body onbeforeunload="setTime()">
+<div id="mz_container">
+	<!-- 头部 -->
+	<div id="header">
+		<div class="cont_main">
+			<div class="h_content" id="top">
+				<!--头部功能栏、广告、关闭按钮-->
+				<div id="logo" class="hright clearfix">
+					<!--<img src="./images/mz/logo.png" />-->
+					<p>京东方招聘在线问答<br><span>您好，我是京东方招聘经理，7*24小时为您解答问题。</span></p>
+				</div>
+				<div class="lefttop hleft" id="funIcon">
+					<div id="functionContainer">
+						<span id="workNo" class="required"></span>
+						<span id="vdnId" class="required"></span>
+						<!--<div class="topItemsContainer topItemsContainer_custom jianju1">
+							<p class="containerItemsb" id="udButton1">
+								<em class="udButton"></em>
+								<em class="containerItemst">ID</em>
+							</p>
+						</div>
+						<div class="topItemsContainer topItemsContainer_custom jianju2">
+							<p class="containerItemsb" id="udButton2">
+								<em class="udButton"></em>
+								<em class="containerItemst">HR</em>
+							</p>
+						</div>-->
+						<!--<div class="topItemsContainer topItemsContainer_custom jianju3">
+							<a href="https://finder.flyme.cn/browser/findphone.jsp" target="_blank" class="containerItemsb" id="udButton3">
+								<em class="udButton"></em>
+								<em class="containerItemst">查找手机</em>
+							</a>
+						</div>
+						<div class="topItemsContainer topItemsContainer_custom jianju4">
+							<a href="javascript:popLeave();" class="containerItemsb" id="udButton4">
+								<em class="udButton"></em>
+								<em class="containerItemst">意见建议</em>
+							</a>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /end头部 -->
+	
+	<div id="scorInfo">		
+		<div class="s_content">
+			<span id="headerBox">
+				<marquee scrollamount="2" class="robotTitle">您好，机器人为您服务</marquee>
+			</span>
+			<span id="headerBoxTime"></span>
+		</div>
+	</div>
+	
+	<!-- 主体内容 -->
+	<div class="wrap">
+		<div class="content clearfix">
+			<div class="content_left">
+				<!--聊天对话框内容(内容容器)  -->
+				<div class="container m-message">
+					<!--<div class="jiaz">
+						<button
+							style='text-align: center; background-color: #cccccc; display: block; border: 1px solid #ccc; border-radius: 4px; margin: 10px auto; width: 100px;'>查看更多消息</button>
+					</div>-->
+					<ul>
+
+					</ul>
+
+				</div>
+				<!--底部    -->
+				<div class="footer">
+					<!-- <iframe id="speak" src="" data-flag="true" frameBorder="0" width="100%" scrolling="no" height="305" style="position: relative; top: 7px;"></iframe> -->
+					<input type="hidden" id="key" value="1">
+					<!--<div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border-top: 1px solid #ccc;">-->
+					<div data-role="footer" data-position="centerLeft" data-tap-toggle="false" style="border-top: 1px solid #c9c9ca;position:relative;">
+						<div style="background-color: #0000FF"></div>
+						 <div class="input-group  input-group-lg" id="send_box">
+							 <div style="height: 5px">
+								 <ul class="toolsbar clearfix" style="display:none">
+									 <!-- 字体 -->
+									 <li id="fontSize" class="toolsbar_li">
+										<ul name="choseSize" id="selectOp" class="selectOp hide">
+											<li data-size="18" class=""></li>
+											<li data-size="16" class=""></li>
+											<li data-size="14" class="active"></li>
+										</ul>
+									 </li class="toolsbar_li">
+									 <!-- 表情 -->
+									 <li id="expression" title="表情" class="toolsbar_li"></li>
+									 <!-- 上传图片 -->
+									 <li id="updatet" title="上传文件" class="toolsbar_li"></li>
+									  <!-- 截图 -->
+									 <li id="btnCapture" title="截图" class="toolsbar_li" onclick="StartCapture()"></li>
+									 <li id="openEvaluate" title="评价" class="toolsbar_li hide"></li>
+									 <!--截图按钮的一些提示-->
+									 <li>
+										<span id="jqMsg" style="position: absolute; height: 40px; top: 0px; left: 190px; display: block; text-align: center; line-height: 40px">
+											<input type="radio" id="captureselectSize" checked="checked" value="0" style="display: none">
+											<!--<label for="captureselectSize" >更多个性化截图选择</label>--> <input type="radio" name="radioselect" id="showprewindow" checked="checked" style="display: none"> <span id="info"></span> <span id="show"></span>
+										</span>
+									</li>
+								 </ul>
+								<!-- <span id="expression" class="input-group-addon" style="position: absolute;width:50px;height:28px;top: 0px;left: 0;display: block;background-color: #1b6d85"><img src="images/s.png" width="28"></span> -->
+								<!-- <span id="updatet" class="input-group-addon" style="padding: 6px 4px;position: absolute;width:50px;height:28px;top: 0px;left: 40px;display: block;"><img src="images/t.png" width="28"></span> -->
+							 </div>
+
+							<textarea autocomplete="off" type="text" class="form-control form-box_focus" id="form-box" placeholder="请输入咨询内容"></textarea>
+							<span id="send" class="input-group-addon">
+								<button type="button" class="btn btn-sm">发 送<span>Enter</span></button>
+								<!--<span class="enter" id="enter_text">Enter</span>
+								<div id="shortcutkey" class="enter_down"></div>
+								<ul id="shortKeyMenu">
+									<li class="clearfix active"><em class="shortKeyChoose"></em><a href="#">[发送快捷键:Enter]</a></li>
+									<li class="clearfix"><em class="shortKeyChoose"></em><a href="#">[发送快捷键:Ctrl+Enter]</a></li>
+								</ul>-->
+							</span>
+							 
+						 </div>
+						
+						<!-- 匹配框 -->
+						<div class="ks-suggest-container" id="ks-suggest-container">
+							<div class="ks-suggest-content">
+								<ol class="clearfix ks-ol" id="ks-suggest-ol"></ol>
+							</div>
+						</div>
+
+						<!-- 表情框 -->
+						<div class="exp_box">
+							<div class="exp_wrap">
+								<div class="exp_type clearfix">
+									<span class="standard exp_checked"></span>
+									<span class="custom"></span>
+								</div>
+								
+								<!--标准表情-->
+								<div id="standard_exp"></div>
+								<!--自定义表情-->
+								<div id="custom_exp" class="hidden"></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+				<!--意见反馈-->
+			<div class="opinionIframe" id="opinion">
+				<!--<iframe width="100%" height="100%" allowtransparency="true" scrolling="auto" src="http://live-i.meizu.com/live800/chatClient/leaveMsgPanel.jsp?companyID=8957&amp;syslanguage=0&amp;configID=4&amp;enterurl=https%3A%2F%2Fstore.meizu.com%2Findex.html%3Fclick%3Dhd_yuyue_meilane3_yt_1_1&amp;pagereferrer=https%3A%2F%2Fhd.meizu.com%2Fyuyue%2Fmeilane3.html%3Frc%3Dbdpcsx%26zy%26bt&amp;opStatus=5" marginwidth="0" framespacing="0" marginheight="0" frameborder="0"></iframe>-->
+				<form method="post" id="leaveWordForm" name="leaveWordForm">
+					<div id="msg_head">
+						<div style="font-size: 30px; padding: 20px 0 10px; color: #595757; line-height: 35px;">
+							请留言,我们会尽快回复。</div>
+						<div class="leave_tip">如果没有留下您的联系方式，客服将无法和您联系！</div>
+					</div>
+
+					<!--输入框-->
+					<div class="inputBox">
+						<div class="features">
+							<!--<label style="color: rgb(180, 181, 181); display: inline;">姓　　名:</label>-->
+							<input name="name" id="name" type="text" maxlength="100" value="" class="msg" style="width: 180px;" required="" placeholder="姓　　名:"> <span class="required" style="display: inline;">*</span>
+						</div>
+
+						<div class="features">
+							<!--<label style="color: rgb(180, 181, 181); display: inline;">电子邮件:</label>-->
+							<input name="email" id="email" type="text" maxlength="100" value="" class="msg" style="width: 180px;" required="" placeholder="电子邮件:"> <span class="required" style="display: inline;">*</span>
+						</div>
+					</div>
+
+					<div class="inputBox">
+						<div class="features">
+							<!--<label style="color: rgb(180, 181, 181); display: inline;">移动电话:</label>-->
+							<input name="phoneNum" id="phone2" type="text" maxlength="20" value="" class="msg" style="width: 180px;" required="null" placeholder="移动电话:"> <span class="notReq" style="display: inline;">*</span>
+						</div>
+						<div class="features"></div>
+					</div>
+
+					<div class="fix">
+						<!--<label for="feed_show" class="feed_show_lable" style="text-align: right; margin-left: 25px; "> 留言内容: </label>-->
+						<textarea name="feed_show" id="feed_show" placeholder="留言内容:"></textarea>
+						<span class="required">*</span>
+					</div>
+
+					<div class="liuyan_footer clearfix">
+						<div style="width:45%; float: left;">
+							<div id="key" style="margin: auto">
+								<a href="#" onclick="submitForm();"> 提交 </a>
+							</div>
+						</div>
+						<div style="width: 45%; float: right;">
+							<div id="goBackChat" style="margin: auto;">
+								<a href="#" onclick="javascript:close_submitForm()">返回魅妹</a>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!--提交成功后-->
+				<div id="content-wrap-suc">
+					<div id="chatbody">
+						<img src="../static/picture/evalSuccess.png">
+						<h3> 提交成功</h3>
+						<p> 感谢支持与理解，我们将尽快与你联系</p>
+					</div>
+					<div id="key">
+						
+						<p id="goBackMeiMei" class="submit" onclick="close_submitForm()">返回</p>
+						
+					</div>
+				</div>
+			</div>
+			
+			<!-- 右边iframe -->
+			<div class="content_right">
+				<!-- tab标题 -->
+				<div id="activitytab" class="activitytab">
+					<div class="contentUl">
+						<ul id="tab" class="clearfix">
+							<li title="热点问题" name="热点问题" class="active">
+								<p class="activityTabTitle">热点问题</p>
+								<p class="activityTabCloseBtn"></p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- tab 内容 -->
+				<div class="tab_cont_right" id="tab_banner">
+					<!-- 默认热点问题 -->
+					<div id="热点问题" class="iframetabDiv active">
+						<iframe frameborder="0" marginheight="0" framespacing="0" marginwidth="0" src="mz_page.html" allowtransparency="true" scrolling="auto"></iframe>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /end主体内容 -->
+	
+	<!-- 底部 -->
+	<div id="foot">
+		<div class="moreFunctionContainer">
+			<div class="cont_main" id="moreFunctionContainer">
+				<!--<div class="bottItemsContainer jianju5">
+					<a href="http://service.meizu.com/experience.html" target="_blank" class="containerItemsb" id="udButton5">
+						<em class="udButton"></em>
+						<em class="containerItemst">服务网点</em>
+					</a>
+				</div>
+				<div class="bottItemsContainer jianju6">
+					<a href="https://www.flyme.cn/firmware.html" target="_blank" class="containerItemsb" id="udButton6">
+						<em class="udButton"></em>
+						<em class="containerItemst">系统下载</em>
+					</a>
+				</div>
+				<div class="bottItemsContainer jianju7">
+					<a href="https://ordercenter.meizu.com/list/index.html?click=wmz_public_grzx_myorder" target="_blank" class="containerItemsb" id="udButton7">
+						<em class="udButton"></em>
+						<em class="containerItemst">订单查询</em>
+					</a>
+				</div>
+				<div class="bottItemsContainer jianju8">
+					<a href="http://service.meizu.com/query/repair.html" target="_blank" class="containerItemsb" id="udButton8">
+						<em class="udButton"></em>
+						<em class="containerItemst">维修查询</em>
+					</a>
+				</div>-->
+			</div>
+		</div>
+	</div>
+	<!-- /end底部 -->
+</div>
+	<div class="zzt hide1">
+		<div class="zzt-bg">
+			<span id="closebtn">X</span>
+			<form id="ptu" method="post" enctype="multipart/form-data" action="">
+				<div class="form-box" style="margin-right: 20px;">
+					<!--<label class="label1" title="选择文件" style="line-height: 36px; height: 36px;">选择文件</label> -->
+					<span>
+						<div class="upload">
+							<input type="file" name="media" id="file"> <input type="button" name="selbutton" class="selbutton" value="选择文件">
+						</div>
+					</span>
+				</div>
+				<div class="form-box yulan hide1" id='yltp'>
+					<!--<label for="previews" title="预览图片">预览图片</label>--><span id="previews" style='margin-top: 8px;'>
+						<img src="" id="imgPreview" class="image_thumb" alt="">
+					</span>
+				</div>
+				<div class="form-box yulan hide1" id='wjmc' style='min-height: 33px;'>
+					<label for="previews1" title="文件名称" style='position: absolute;'>文件名称</label> <span id="previews1" style="margin-left: 90px; width: 170px; word-wrap: break-word; margin-top: 5px; line-height: 15px;">
+
+					</span>
+				</div>
+				<div class="form-box yulan hide1" id='wjlx' style='min-height: 33px;'>
+					<label for="filetype" title="文件类型" style='position: absolute;'>文件类型</label> <span id="filetype1" style="margin-left: 90px; margin-top: 6px; line-height: 15px;"> </span>
+				</div>
+				<div class="bor" style='position: absolute; bottom: 10px; width: 90%;'>
+					<input type="button" id="submitimg" value="发送">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!--截图-->
+	<div class="jqt hide1">
+		<div class="jqt-bg">
+			<span id="jqclosebtn">X</span>
+			<form id="jqtu" method="post" enctype="multipart/form-data" action="">
+				<div class="form-box yulan " id='jqyltp'>
+					<label class="jqLabel" for="previews" title="预览图片">预览</label> <span id="jqpreviews" style='margin-top: 8px;'> <img src="" id="jqimgPreview" class="image_thumb" alt="预览图片">
+					</span>
+				</div>
+				<div class="form-box yulan hide1" id='jqwjlx' style='min-height: 33px;'>
+					<label for="filetype" title="文件类型" style='position: absolute;'>文件类型</label> <span id="jqfiletype1" style="margin-left: 90px; margin-top: 6px; line-height: 15px;"> </span>
+				</div>
+				<div class="bor" style='position: absolute; bottom: 10px; width: 90%;'>
+					<input type="button" id="jqsubmitimg" value="发送">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="imgpicture hide1">
+		<img id="img_picturec">
+	</div>
+	<div class="videoture hide1">
+		<div class="videobox">
+			<video controls="" width="680" height="400" id="video">
+				<source src="" type="" media="">
+				<source src="" type="" media="">
+				<source src="" type="" media="">
+				<span>不支持HTML5视频!</span>
+			</video>
+		</div>
+		<div class="videocolse" id="videocolse">X</div>
+	</div>
+	<audio src="" id="audio">
+		<source src="" type="" media="">
+		<source src="" type="" media="">
+		<source src="" type="" media="">
+		<span>您的浏览器不支持 audio 标签</span>
+	</audio>
+	<a href="javascript:;" class="weui-btn weui-btn_default hide1" id="showLoadingToast">加载中提示</a>
+	<iframe id="gdiframe" style="width: 0; height: 0; border: 0;"></iframe>
+</body>
+<script>
+	//弹出意见建议
+		function popLeave(){
+			$('.content_left').hide();
+			$('#opinion').show();
+			$('#leaveWordForm').show();
+			$('#content-wrap-suc').hide();
+		}
+	$(function() {
+		//判断是不是PC端
+		function IsPC(){  
+			   var userAgentInfo = navigator.userAgent;  
+			   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+			   var flag = true;  
+			   for (var v = 0; v < Agents.length; v++) {  
+				   if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+			   }  
+			   return flag;  
+		}
+		
+		$('.m-message').on('click','#leaveMsgClick',function(){
+			popLeave();
+		});
+		//if(IsPC()){
+			//$('#mz_container').css({'height':$(window).height()+'px'});
+		//	widthSize();
+		//}
+		
+		//$(window).resize(function () {//当浏览器大小变化时
+		//	widthSize();
+		//});
+		//function widthSize(){
+		//	if($(document.body).height()>700){
+		//		$('.wrap').css({'height':'550px'});
+		//	}else{
+		//		$('.wrap').css({'height':$(window).height()-200+'px'});
+		//	}
+		//	
+		//}
+		
+		if (/AppleWebKit.*Mobile/i.test(navigator.userAgent)
+				|| (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+			if (window.location.href.indexOf("?mobile") < 0) {
+				try {
+					if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+						//console.log('安卓，win Phone , iphone ，等系统的移动端');
+						//如上的移动端
+						
+						$('.m-message').click(function(){
+							$('#ks-suggest-container').hide();
+						})
+						$(".form-box_focus").focus(function(){
+							setTimeout(function(){  
+								window.scrollTo(0,document.body.clientHeight);  
+							}, 500); 
+						});
+					} else if (/iPad/i.test(navigator.userAgent)) {
+						//如为ipad时的执行
+						$(".footer").css('position', 'fixed');
+						$('.fixed-head img').attr('src', 'images/dia_top_img1.png');
+					}
+				} catch (e) {
+				}
+			}
+		} else {
+			//		    	console.log(" PC");
+			$(".fixed-box").css('position', 'relative');
+			//$(".footer").css('position', 'absolute');
+			$('.fixed-head img').attr('src', 'images/dia_top_img.png');
+		}
+	})
+</script>
+<!--牛牛截图-->
+<!--<script language="javascript" src="./niuNiu/js/jquery-1.6.4.min.js"></script>-->
+<script language="javascript" src="../static/js/jquery.md5.js"></script>
+<script language="javascript" src="../static/js/jquery.json-2.3.min-20150926.js"></script>
+<script language="javascript" src="../static/js/niuniucapture-20180408.js"></script>
+<script language="javascript" src="../static/js/capturewrapper-2018040801.js"></script>
+<!--/end-->
+<script type="text/javascript" src="../static/js/mz_websocket-2019071501.js" ></script>
+<script src="../static/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/mz_speak-2108083101.js"></script>
+<!--<script type="text/javascript" src="./js/vconsole.min.js"></script>-->
+<script>
+
+</script>
+
+</html>

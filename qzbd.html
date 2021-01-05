@@ -1,0 +1,323 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="mobileUrl" content="http://江苏校园招聘网.m.zhiye.com/">
+<link type="text/css" rel="stylesheet" href="static/css/frontmodule.css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_global-0.1..css" front="css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_bxslider-0..css" front="css">
+<link type="text/css" rel="stylesheet" href="static/css/111111_themes_江苏校园招聘网new_style0901-0.css" front="css">
+<script type="text/javascript">
+       //mobileUrl rewrite
+       function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          var appSrcMetas = document.getElementsByName('mobileUrl');
+			      if(appSrcMetas.length > 0) {
+		       		  window.location.href = appSrcMetas[0].getAttribute("content");
+			      }
+		    }
+		  }
+      goPAGE();
+
+       //opsapi
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//'+document.location.host+'/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script>
+<script type="text/javascript" src="static/js/111111_themes_江苏校园招聘网new_bsbase-0.1..js"></script>
+<script type="text/javascript" src="static/js/111111_themes_江苏校园招聘网new_bxsliderjs-.js"></script>
+<script type="text/javascript">var $bs_vars={'st':'//stc.beisen.com/','version':'2020.11.09.001','constSite':'//const.italent.cn'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script><!--引用静态文件:requirejs-->
+<script type="text/javascript" src="static/js/require.js"></script>
+<title>江苏校园招聘网-江苏招聘网</title>
+<script>
+ function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+			    var appSrcMetas = document.getElementsByName('mobileUrl');
+			    if(appSrcMetas.length > 0){
+		       		window.location.href = appSrcMetas[0].getAttribute("content");
+			    }
+		    } 
+		  }
+      goPAGE();
+</script>
+  <style>
+    .bodynow{overflow: hidden;}
+  </style>
+<script>  $(function () {
+
+            $(".tcxct li").click(function () {
+                var num3 = $(".tcxct li").index($(this))
+                $(this).addClass("now")
+                $(this).siblings("li").removeClass("now")
+                $(".tcxcbm").eq(num3).slideDown()
+                $(".tcxcbm").eq(num3).siblings(".tcxcbm").slideUp()
+            })
+
+            /****/
+            $(".zwss_input").focus(function () {
+                if ($(this).val() == "职位太多？搜一下试试！") {
+                    $(this).val("");
+                    $(this).addClass("col333")
+                }
+            })
+            $(".zwss_input").blur(function () {
+                if ($(this).val() == "") {
+                    $(this).val("职位太多？搜一下试试！");
+                    $(this).removeClass("col333")
+                }
+            })
+            $(".zwlb li a").click(function () {
+                url = $(this).attr("data");
+                $(".tcbg").fadeIn()
+                $(".tcbox").fadeIn()
+                $(".zwxqtc").slideDown()
+                $('iframe').attr('src', url);
+              $('body').addClass('bodynow')
+            })
+
+            /****/
+            $(".qa li").click(function () {
+                $(".tcbg").fadeIn()
+                $(".tcbox2").fadeIn()
+                var num4 = $(".qa li").index($(this))
+                $(".tcqa li").eq(num4).show()
+                $(".tcqa li").eq(num4).siblings("li").hide()
+                  $('body').addClass('bodynow')
+            })
+            $('.hddb').click(function () {
+                $('body,html').stop().animate({
+                    'scrollTop': 0,
+                    'duration': 100,
+                    'easing': 'ease-in'
+                })
+            });
+
+            $(".djtcwd").click(function () {
+                $(".tcbg").fadeIn()
+                $(".tcbox").fadeIn()
+                $(".tcwd").slideDown()
+                  $('body').addClass('bodynow')
+            })
+
+            $(".icon4").click(function () {
+                $(".zwxqtc").slideUp()
+                $(".tcwd").slideUp()
+                $(".tcxc").slideUp()
+                $(".tcbox,.tcbox2").fadeOut()
+                $(".tcbg").fadeOut()
+                   $('body').removeClass('bodynow')
+            })
+
+
+        })
+
+ 
+
+</script>
+
+<style type="text/css">
+  .sina{display: block;}
+</style>
+</head>
+
+<body>
+ 
+<style type="text/css">
+    .isLogin,.unLogin {
+        display:inline-block;
+        vertical-align: top;
+    }
+  .nav a{margin:0 38px}
+</style>  
+<div class="header">
+  <span class="logo"><a href="index1.html" target="_blank" class="gw"></a>
+    <a href="javascript:;" target="_blank" class="gw b f26" style="
+    color: #000;
+    width: 105px;
+    margin: 0;
+    vertical-align: middle;
+">加入我们</a><img src="static/picture/111111_themes_江苏校园招聘网new_images_nav.png" style="
+    vertical-align: middle;
+"><a href="xyzp.html" class="gwr" style="
+    vertical-align: middle;
+">校园招聘</a></span>
+  <div class="headerr">
+    <div class="isLogin" style="display:none">
+              <a href="Portal/Account/Login-http2f2fwww.jsxyzp.com2fPo.html">个人中心</a>
+              <a href="User/Account/LogOut.html">退出</a>
+          </div>
+          <div class="unLogin" style="display:none">
+                  <a href="Portal/Account/Login-2Fqzbd.html">登录</a>
+                  <a href="Portal/Account/Register-2Fqzbd.html">注册</a>
+    </div>
+    <span></span></div>
+  <div class="cb"></div>
+ </div><!--header end-->
+ <div class="navbg"><div class="nav">
+  <a href="xyzp.html" class=''>校园招聘</a>
+   <a href="intern.html" class=''>实习生</a>
+   <a href="OpenDay.html" class=''>OpenDay</a>
+   <!--<a href="/jlbjs" class=''>校园俱乐部</a>-->
+   <a href="" class=''>校园俱乐部</a>
+   <a href="challenges.html" class=''>江苏校园招聘网创新挑战赛</a>
+   <a href="javascript:;" class=''>江苏校园招聘网营销挑战赛</a>
+   <a href="" class='now'>求职宝典</a>
+ </div></div><!--navbg end-->
+<script type="text/javascript">
+    var makeUserInfo = function (resp) {
+        var userInfo = {};
+        //userInfo.name = resp.Model.Email;
+        userInfo.isLogin = resp.Success;
+        return userInfo;
+    }
+    
+    $.ajax({
+        url: '/User/Account/GetUserLoginInfo?v=' + Math.random()
+        , data: {}
+        , cache: false
+        , type: 'post'
+        , success: function (resp) {
+            //配置用户基本信息
+            var userInfo = makeUserInfo(resp);
+            var loginView = $(".header .isLogin");
+            var unLoginView = $(".header .unLogin");
+            if (userInfo.isLogin) {
+                loginView.show()
+            }
+            else {
+                unLoginView.show()
+            }
+            
+        }//success
+        , error: function () {
+            throw new Error('ERROR: get user info')
+        }
+    });//ajax    });//ajax   
+
+</script>
+ 
+  
+	<iframe class="江苏校园招聘网u-iframe" style="width: 100%;" frameborder="0" scrolling="no" src="web/job.html"></iframe>
+
+<script>
+function jsonpCallback(data) {
+				    var obj = eval("("+data+")");
+					console.log(obj);
+					
+					if(obj.code=='0') {
+						
+						console.log('success');			
+						console.log(obj.data.list.height);
+					$('.江苏校园招聘网u-iframe').css('height',obj.data.list.height)
+					} else {
+					
+						console.log('fail');
+					}
+				}
+				
+				$.ajax({
+					url:'http://u.江苏校园招聘网.com/api/b1/pc/quiz/get-campus-height',
+					dataType:"jsonp",
+					jsonp:"jsonpCallback",
+					success:function(data) {
+					    
+					}
+				});
+</script>
+ <div class="footer"><div class="footerm">
+ <div class="footerl">
+  <ul>
+   <li>
+    <h2>企业概览</h2>
+    <a href="javascript:;" target="_blank">公司介绍</a>
+    <a href="javascript:;" target="_blank">管理团队</a>
+    <a href="javascript:;" target="_blank">多媒体中心</a>
+   </li>
+   <li>
+    <h2>产品与服务</h2>
+    <a href="javascript:;" target="_blank">端口器件</a>
+    <a href="javascript:;" target="_blank">智慧物联</a>
+    <a href="javascript:;" target="_blank">智慧医工</a>
+   </li>
+   <li>
+    <h2>加入我们</h2>
+     <a href="xyzp.html" target="_blank">校园招聘</a>
+     <a href="User/Account/LogOut.html" target="_blank">社会招聘</a>
+     <a href="User/Account/LogOut.html" target="_blank">Global Talent</a>
+   </li>
+   <li>
+    <h2>快速链接</h2>
+    <a href="javascript:;" target="_blank">江苏校园招聘网 Japan</a>
+    <a href="javascript:;" target="_blank">北京明德医院</a>
+    <a href="javascript:;" target="_blank">恒通国际创新园</a>
+   </li>
+   <div class="cb"></div>
+  </ul>
+ </div>
+ <div class="footerb">Copyright&nbsp;2019&nbsp;江苏校园招聘网 Inc. 保留所有权利。使用条款客户隐私政策</div>
+ <div class="cb"></div>
+</div></div><!--footer end-->
+<div class="float">
+ <ul>
+  <li class="hddb"><span class="icon15a"></span><div class="hddbtxt">回到<br>顶部</div></li>
+ <!-- <li class="wtfk"><span class="icon15b"></span><div class="wttxt">问题<br/>反馈</div><img src="http://stcms.beisen.com/cmsportal/111111/111111_themes_江苏校园招聘网new_img_iocn16b.jpg" alt="" width="150"/></li>-->
+  <li class="gzwx2">
+    <span class="icon15c"></span><div class="wxtxt">关注<br>微信</div>
+    <div class="gzwxl">
+      <img src="static/picture/111111_themes_江苏校园招聘网new_img_wbewm.jpg" alt="">
+      <p>微信公众号 江苏校园招聘网招聘</p>
+    </div>
+  </li>
+   <li class='sina'>
+     <a href="javascript:;" target="_blank" class="icon54"></a>
+      <div class="gzwxl">
+      <img src="static/picture/111111_themes_江苏校园招聘网new_img_img54.png" alt="">
+      <p>新浪微博 京东方校园招聘</p>
+    </div>
+   </li>
+ <li><a href="FS_WEB_CCS/mz_websocket.html" target="_blank" class="icon15b"></a><div class="wttxt"></div></li>
+
+ </ul>
+</div><!--float end-->
+  
+  
+ <!--弹出 开始-->
+
+   
+    
+  
+  
+   
+</body>
+</html>
+<script type="text/javascript">
+        require([
+            vstr('${st}/${version}/cmsportal/skin/js/baiduStatistics.js')
+
+		]);
+    </script><script type="text/javascript">
+    $(function(){
+    _splash('zhiye_contentpage',0,102010,'new_zhiye_com');
+    });
+    </script>

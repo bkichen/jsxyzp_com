@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        
+    注册
+
+    </title>
+    <script type="text/javascript">
+        try {
+            top.location.hostname;
+            if (top.location.hostname != window.location.hostname) {
+                top.location.href = window.location.href;
+
+            }
+            if(window.location.host == 'campus.hikvision.com' || window.location.host == 'grcbank.zhiye.com'){
+                window.hikvision = true;
+            }
+        }
+        catch (e) {
+            top.location.href = window.location.href;
+        }
+    </script>
+
+    <!--通用样式Css和脚本-->
+    <script type="text/javascript">var $bs_vars={'st':'//stc.beisen.com/','version':'2020.11.09.001','constSite':'//const.italent.cn'};function vstr(str) {
+         if (typeof ($bs_vars) == 'undefine')
+             return str;
+         var result = str;
+         for (var v in $bs_vars) {
+             var regex = new RegExp('\\$\\{' + v.toString() + '\\}|\\{' + v.toString() + '\\}', 'igm');
+             result = result.replace(regex, $bs_vars[v]);
+         }
+         return result;
+     };</script>
+    <!--引用静态文件:requirejs-->
+<script type="text/javascript" src="../../static/js/require.js"></script>
+    <!--引用静态文件:skin_default-->
+<link href="../../static/css/common.css" rel="stylesheet" type="text/css"><link href="../../static/css/templateform.css" rel="stylesheet" type="text/css"><link href="../../static/css/controls.css" rel="stylesheet" type="text/css"><link href="../../static/css/default.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="../../static/js/base_new-1.js"></script><script type="text/javascript" src="../../static/js/widgetnew-3.js"></script><script type="text/javascript" src="../../static/js/common.js"></script><script type="text/javascript" src="../../static/js/bsdialog.js"></script><script type="text/javascript" src="../../static/js/common1.js"></script><script type="text/javascript" src="../../static/js/controls.js"></script><script type="text/javascript" src="../../static/js/underscore.js"></script><script type="text/javascript" src="../../static/js/school-select-v2-39.js"></script><link href="../../static/css/school-select-v2.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="../../static/js/structured-data-select-1.js"></script><link href="../../static/css/structured-data-select.css" rel="stylesheet" type="text/css">
+    <!--引用静态文件:skin_new_css-->
+<link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+    <!--引用静态文件:new_dialog_js-->
+<script type="text/javascript" src="../../static/js/dialog_js.js"></script>
+    <!--引用静态文件:tripledesjs-->
+<script type="text/javascript" src="../../static/js/tripledes.js"></script>
+    <!--引用静态文件:control_js-->
+<script type="text/javascript" src="../../static/js/industry-select.js"></script>
+    <!--引用静态文件:tipsy_js-->
+<script type="text/javascript" src="../../static/js/jquery.tipsy.js"></script>
+    <!--引用静态文件:tipsy_css-->
+<link href="../../static/css/jquery.tipsy.css" rel="stylesheet" type="text/css">
+    <!--引用静态文件:control_css-->
+<link href="../../static/css/industrySelect.css" rel="stylesheet" type="text/css">
+    <!--产品头部CSS和脚本-->
+    <script src="../../static/js/WdatePicker.js"></script>
+    <script type="text/javascript">
+       //mobileUrl rewrite
+       function goPAGE() {
+		    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          var appSrcMetas = document.getElementsByName('mobileUrl');
+			      if(appSrcMetas.length > 0) {
+		       		  window.location.href = appSrcMetas[0].getAttribute("content");
+			      }
+		    }
+		  }
+      goPAGE();
+
+       //opsapi
+       window.PERF_START=new Date;
+       function _splash(page, uid, tid, pid){
+        uid =  uid || 0;  // 这里是用户ID
+        tid =  tid || 0;   // 这里是租户ID
+        pid =  pid || 'unknown';  // 这里是项目标识
+        var now = new Date;
+        var start = window.PERF_START || now;
+        var diff = now - start;
+        var rand = Math.round(Math.random()*1000000);
+        var url= document.location.protocol+'//'+document.location.host+'/opsapi/AddLog?appName='+pid+'&label=%5Bsplash%5D%20'+page+'&uid='+uid+'&tid='+tid+'&time='+diff+'&type=1&sid='+rand+'&step=0';
+        var img = new Image;
+        img.src = url;
+    }
+    </script>
+    <!--引用静态文件:front_css-->
+<link href="../../static/css/front.css" rel="stylesheet" type="text/css">
+
+
+    <style type="text/css">
+        .checkbox_list {
+            float: left;
+            width: 450px;
+        }
+
+        .form_container ul li span.start_date {
+            width: 80px;
+        }
+
+        .form_container ul li span.end_date {
+            width: 70px;
+        }
+
+        .dl_logo img {
+            width: auto !important;
+            height: 40px !important;
+            margin: 16px 0 0 30px !important;
+        }
+
+    </style>
+
+    
+
+    <script type="text/javascript" id="user-info-header">
+        window["foreignMobileRegex"] = "^\\+?(00){1,2}(9[976]\\d|8[987530]\\d|6[987]\\d|5[90]\\d|42\\d|3[875]\\d|2[98654321]\\d|9[8543210]|8[421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\\d{1,14}$|^09\\d{8,20}$";
+        window["foreignMobileRegex"] || (window["foreignMobileRegex"] = "^\\+?(00){1,2}(9[976]\\d|8[987530]\\d|6[987]\\d|5[90]\\d|42\\d|3[875]\\d|2[98654321]\\d|9[8543210]|8[421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\\d{1,14}$");
+        window["mobileRegexStr"] = /^13[0-9]\d{8}$|^14[5-9]\d{8}$|^15[0-3]\d{8}$|^15[5-9]\d{8}$|^16[5-7]\d{8}$|^17[0-8]\d{8}$|^18[\d]{9}$|^19[1,5,7,8,9]\d{8}$/;
+        var makeUserInfo = function (resp) {
+            var self = this;
+            var userInfoKey = 'userInfo';
+            self[userInfoKey] = {};
+            self[userInfoKey].name = resp.Model.Email;
+            self[userInfoKey].shortName = (self[userInfoKey].name && self[userInfoKey].name.length > 20) ? self[userInfoKey].name.substring(0, 20) : self[userInfoKey].name;
+            self[userInfoKey].isLogin = resp.Success;
+            self[userInfoKey].firstLogin = resp.Model.ThFirstLogin;
+            self[userInfoKey].mobile = resp.Model.Mobile;
+            self[userInfoKey].mbToken = resp.Model.MbToken;
+            self[userInfoKey].IsAccountCancellationEnable = resp.Model.IsAccountCancellationEnable;
+            return self[userInfoKey]
+        }
+
+        $.ajax({
+            url: '/User/Account/GetUserLoginInfo?v=' + Math.random()
+            , data: {}
+            , async: false
+            , type: 'post'
+            , success: function (resp) {
+                //配置用户基本信息
+                makeUserInfo.apply(window, [resp]);
+            }//success
+            , error: function () {
+                throw new Error('ERROR: get user info')
+            }
+        });//ajax
+
+        $(document).ready(function () {
+
+            var isApplyDetail = "False".toLowerCase() == 'true' ? true : false;
+            //先获取用户的基本信息，这里的ajax是同步等待
+            if (!isApplyDetail) {
+                var userInfo = window.userInfo;
+                var detailView = $(".dl_rightit .isApplyDetail");
+                var loginView = $(".dl_rightit .isLogin");
+                var unLoginView = $(".dl_rightit .unLogin");
+                detailView.show();
+                //头部对外公开的口，可以修改用户名
+                window.loginHeaderView = {
+                    userNameText: function (text) {
+                        var shortText = text && text.length > 20 ? text.substring(0, 20) : text;
+                        loginView.find('.userShortName').text(userInfo.mobile ? userInfo.mobile : shortText);
+                        loginView.find('#topUserEmail').attr('title', text);
+                    }
+                };
+                if (!!userInfo && userInfo.isLogin) {
+                    loginView.show();
+                    loginView.find('.userShortName').text(userInfo.mobile ? userInfo.mobile : userInfo.shortName);
+                    loginView.find('#topUserEmail').attr('title', userInfo.name);
+                    loginView.find('#topUserMbToken').attr('title', userInfo.mbToken);
+                }
+                else {
+                    unLoginView.show();
+                }
+            }
+        })
+
+        var UserPrompt = function (options) {
+            this.paramMap = {
+                targetSelector: 'targetSelector'
+                , promptText: 'promptText'
+            }
+            this.floater = {
+                tag: options[this.paramMap.targetSelector]
+                , position: {}
+                , size: {}
+            };
+            this.promptText = '您尚未设置密码，请点这里修改吧！';//options[this.paramMap.promptText] || '';
+            this.ui = {
+                close: ".user-prompt-closeBtn"
+            };
+            this.initialize();
+        };
+        UserPrompt.prototype = {
+            initialize: function () {
+                var self = this;
+                if ($(self.floater.tag).length < 1) return;
+
+                self.getFloater();
+                self.makeView();
+                self.attachCss()
+                self.aliveUi();
+                self.bindEvents();
+            }
+            , render: function () {
+                var self = this;
+                self.$el.appendTo($('body'));
+            }
+            , show: function () {
+                var self = this;
+                if ($(self.floater.tag).length < 1) return;
+                //控制所有子页面的show，如果用户第一次登陆才可以show
+                //这里没有在子页面去判断是否show是因为单价太高，一共有3个子页面，不好维护
+                if (window.userInfo.firstLogin) self.render();
+            }
+            , hide: function () {
+                var self = this;
+                $el.remove();
+            }
+            , getFloater: function () {
+                var self = this;
+                self.floater.tag = $(self.floater.tag) || $('body');
+                self.floater.position = self.floater.tag.position();
+                self.floater.size = {
+                    'height': self.floater.tag.height()
+                    , 'width': self.floater.tag.width()
+                }
+            }
+            , makeView: function () {
+                var self = this;
+                self.$el = $("<div class='user-prompt-user-firstIn'>" +
+                    "<div class='user-prompt-action-container'>" +
+                    "<span class='user-prompt-closeBtn' title='close'></span>" +
+                    "</div>" +
+                    "<div class='user-prompt-content'>" + self.promptText + "</div>" +
+                    "</div>");
+            }
+            , attachCss: function () {
+                var self = this;
+                //这里的0.9和4是写死的数，为了调整位置
+                self.$el.css({
+                    'top': (self.floater.position.top + self.floater.size.height) + 'px' // + 15
+                    , 'left': (self.floater.position.left - self.floater.size.width / 4) + 'px'//+ self.floater.size.width / 2
+                });
+            }
+            , aliveUi: function () {
+                var self = this;
+                var aliveUi = {};
+                $.each(self.ui, function (key, value) {
+                    aliveUi[key] = self.$el.find(value) || null;
+                });
+                self.ui = aliveUi;
+            }
+            , bindEvents: function () {
+                var self = this;
+                self.ui.close.bind('click', function () {
+                    self.$el.remove()
+                })
+            }
+        };
+
+
+    </script>
+</head>
+<body>
+
+    <div class="bs_deliver">
+        <div class="dl_header_border">
+            <div class="dl_header clearfix">
+                <div class="dl_logo">
+                    <img id="logoImg" class="header-logo-img" src='../../static/picture/111111_medias_logo2-635538291605.png' style="width: 300px; height: 80px; display: none;">
+                </div>
+                <div class="dl_rightit">
+
+                    <div class="isApplyDetail" style="display: none">
+
+                        <div class="isLogin" style="display: none">
+                            <span id="topUserEmail" class="pad3" title=""><span class="userShortName"></span><span class="i18n">
+                                <!--welcome-->
+                            </span></span>
+                            <span id="topUserMbToken" class="pad3" title="" style="display: none"></span>
+                            <span class="pad3"><a href="javascript:;" class="i18n">
+                                <!--home-->
+                            </a></span>
+                            <em class="dl_header_line dl_padtb05">|</em>
+                            <span class="isUserCenter" style="display: none">
+
+                                <span class="pad3"><a href="Login-http2f2fwww.jsxyzp.com2fPo.html" class="i18n">
+                                    <!--user_center-->
+                                </a></span>
+                                <em class="dl_header_line dl_padtb05">|</em>
+
+                            </span>
+                            <span class="pad3"><a href="Login-http2f2fwww.jsxyzp.com2fPo1.html" class="i18n">
+                                <!--log_out-->
+                            </a></span>
+                        </div>
+
+                        <div class="unLogin" style="display: none">
+                            <span class="pad3"><a href="javascript:;" class="i18n">
+                                <!--home-->
+                            </a></span>
+                            <em class="dl_header_line dl_padtb05">|</em>
+                            <span class="pad3"><a href="Login.html" class="i18n">
+                                <!--login-->
+                            </a></span>
+                            <em class="dl_header_line dl_padtb05">|</em>
+                            <span class="pad3"><a href="Register.html" class="i18n">
+                                <!--reg-->
+                            </a></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dl_content dl_gray_bg">
+            <!---->
+            <!--申请职位 s-->
+            
+
+
+            <!--申请职位 e-->
+            <!--我的简历 s-->
+            <!--简历内容 s-->
+            
+    
+
+<style type="text/css">
+    /*覆盖main.css中默认95px*/
+    body .dl_error_wrap span.bs_pop_alert{
+        padding-left:130px;
+    }
+    .inter-phone-wrapper span.bs_pop_alert,.error_code_inter{
+        background: none!important;
+        display: block;
+        font-size: 12px;
+        color: #cc2929;
+        padding: 0;
+    }
+    div.selected_color {
+    color: #1687d9;
+    border-bottom: 2px solid #1687d9;
+    }
+    div.tab_mobile,div.tab_email{
+        font-size:14px;
+        padding-bottom:0;
+        display:inline-block;
+        width:140px;
+        text-align:center;
+        cursor:pointer;
+    }
+    .map .dl_loginright .dl_register{
+        text-align: left;
+    }
+    .map .dl_loginright .dl_register p{
+        color: #000;
+    }
+    .map .service_content a{
+        color:#1687d9;
+    }
+    .service_content__text {
+        display: inline;
+        font-size: 14px;
+    }
+</style>
+<div class="dl_content">
+	<div class="map">
+		<div class="dl_lit-wrap clearfix register_wraper">
+        <div class="dl_loginleft dl_padr0">
+            <h1 style="margin-bottom: 14px;font-size: 18px;font-weight: bold;color: #475966;" class="i18n"><!--regByPhone--></h1>
+            <div class="mid_line">or</div>
+            <!--<div style="width:310px;text-align:center;"><span class="i18n register_type tab_mobile selected_color" style="border-bottom:none;">注册账号</span></div>-->
+            
+                <div class="i18n register_type tab_mobile selected_color"><!--login_inner--></div>
+                <span class="dot"></span>
+                <div class="i18n register_type tab_email"><!--login_inter--></div>
+                
+            
+            <form id="registPhoneForm" method="post" action="/User/Account/RegisterMobile">
+                <input type="hidden" id="returnurl" name="returnurl" value="/xyzp/?PageIndex=6">
+                <input type="hidden" id="passwordRegexType" name="passwordRegexType" value="0">
+                    <ul class="dl_phone_wrap">
+                        <li class="clearfix">
+                            <span class="dl_form_left i18n"><!--phone_num--></span>
+                            <input data-val-ignore="hidden" type="text" class="dl_textinp i18n_valid dl_dftgrey phoneNum" i18name="phone_require" name="phoneNum" id="phoneNum" data-val="true" data-val-required="必填" defaultvalue="请输入手机号" data-val-regex-pattern="^13[0-9]\d{8}$|^14[5-9]\d{8}$|^15[0-3]\d{8}$|^15[5-9]\d{8}$|^16[5-7]\d{8}$|^17[0-8]\d{8}$|^18[\d]{9}$|^19[1,5,7,8,9]\d{8}$" data-val-regex="手机号格式不正确" style="color:#475966">
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n hasphone" style="display:none;"><!--registered--></span><!--手机号已被注册，请直接登录-->
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="phoneNum" data-valmsg-replace="true"></span>
+                        </li>
+					 	<li class="clearfix">
+					 		<span class="dl_form_left i18n"><!--password--></span>
+					 		<input data-val-ignore="hidden" type="password" class="dl_textinp i18n_valid" i18name="reg_pwd" name="PhonePass" id="PhonePass" info="密码8-20位，必须包含字母和数字（不能包含空格），字母区分大小写" data-val-length="您输入的密码长度超过20位" data-val-length-max="20" data-val-regex-pattern="^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z-`=\\\[\];',./~!@#$%^&*_+|(){}:&quot;<>?]{8,20}$" data-val-regex="您输入的密码不符合规范" data-val="true" data-val-required="必填">
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="PhonePass" data-valmsg-replace="true"></span>
+					 	</li>
+					 	<li class="clearfix">
+					 		<span class="dl_form_left i18n"><!--confirm_pwd--></span>
+					 		<input data-val-ignore="hidden" class="dl_textinp i18n_valid" i18name="confirmpwd" id="ConfirmPhonePassword" name="ConfirmPhonePassword" type="password" data-val="true" data-val-equalto="两次输入的密码不一致" info="请确保和密码输入一致" data-val-equalto-other="*.PhonePass" data-val-required="必填">
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="ConfirmPhonePassword" data-valmsg-replace="true"></span>
+					 	</li>
+                        <li class="clearfix">
+                            <span class="dl_form_left i18n"><!--SMS_code--></span>
+                            <div class="validate_content validatecode_info verify_wrapper">
+					            <span class="validate_bac" style="display: inline-block;">
+                                    <input data-val-ignore="hidden" type="text" class="dl_textinp i18n_valid send_code smscode_new" i18name="message_code" name="smsCode" id="smsCode" data-val-required="必填" data-val="true" data-val-regex-pattern="^\d{6}$" data-val-regex="短信验证码格式不正确">
+					            </span>
+                                <span class="send_smscode i18n"><!--send_SMS_code--></span>
+                            </div>
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n error_limit" style="display:none;"><!--error_limit--></span>
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n  send_limit" style="display:none;"><!--send_limit--></span>
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n error_code" style="display:none;"><!--SMS_code_error--></span>
+                            <span class="bs_pop_alert field-validation-error phone_num_error geetest_error" style="display:none;color:#cc2929;">请求超时，请手动刷新页面后重试</span>
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="smsCode" data-valmsg-replace="true"></span>
+                         </li>
+                    </ul>
+					<span class="tishi i18n" style="display:none"><!--account_err_tip--></span>
+                    <input id="proId" type="hidden" newid="False">
+                    
+                        <div class="margin0auto dl_mgtop7">
+                            <a href="javascript:void(0);" class="dl_btn_green1" id="submitbutton_phone">
+                                <span class="i18n"><!--reg--></span>
+                            </a>
+                        </div>
+                    
+
+            </form>
+            <form id="registInterForm" method="post" action="/User/Account/RegisterForForeign" style="display:none">
+                    <input type="hidden" id="returnurl" name="returnurl" value="/xyzp/?PageIndex=6">
+                    <ul class="dl_phone_wrap">
+                        <li class="clearfix inter-phone-wrapper">
+                            <span class="dl_form_left i18n"><!--phone_num--></span>
+                            <input data-val-ignore="hidden" type="text" class="dl_textinp i18n_valid dl_dftgrey phoneNum" i18name="bind_interphone_require" name="PhoneNum" id="interPhoneNum" data-val="true" data-val-required="必填" defaultvalue="请输入手机号" data-val-regex="手机号格式不正确" style="color:#475966" data-val-regex-pattern="^\+?(00){1,2}(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$|^09\d{8,20}$">
+                            <div style="font-size:12px;color: #9aa8b3;"><span class="i18n" style="display:inline-block;"><!--interphone_example--></span><span style="color:#475966">00852</span><span>87654321</span></div>
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n hasphone" style="display:none;"><!--registered--></span>
+                            <span class="bs_pop_alert field-validation-error phone_num_error i18n phone-error" style="display:none;">手机号格式不正确</span>
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="PhoneNum" data-valmsg-replace="true"></span>
+
+                        </li>
+					 	<li class="clearfix">
+					 		<span class="dl_form_left i18n"><!--password--></span>
+					 		<input data-val-ignore="hidden" type="password" class="dl_textinp i18n_valid" i18name="reg_pwd" name="PhonePass" id="PhonePass" info="密码8-20位，必须包含字母和数字（不能包含空格），字母区分大小写" data-val-regex-pattern="^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z-`=\\\[\];',./~!@#$%^&*_+|(){}:&quot;<>?]{8,20}$" data-val="true" data-val-required="必填">
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="PhonePass" data-valmsg-replace="true"></span>
+					 	</li>
+					 	<li class="clearfix">
+					 		<span class="dl_form_left i18n"><!--confirm_pwd--></span>
+					 		<input data-val-ignore="hidden" class="dl_textinp i18n_valid" i18name="confirmpwd" id="ConfirmPhonePassword" name="ConfirmPhonePassword" type="password" data-val="true" data-val-equalto="两次输入的密码不一致" info="请确保和密码输入一致" data-val-equalto-other="*.PhonePass" data-val-required="必填">
+                            <span class="field-validation-valid bs_pop_alert " data-valmsg-for="ConfirmPhonePassword" data-valmsg-replace="true"></span>
+                            <span class="bs_pop_alert field-validation-error phone_num_error geetest_error" style="display:none;color:#cc2929;">请求超时，请手动刷新页面后重试</span>
+					 	</li>
+                    </ul>
+					<span class="tishi i18n" style="display:none"><!--account_err_tip--></span>
+                    <input id="proId" type="hidden" newid="False">
+                    
+                        <div class="margin0auto dl_mgtop7">
+                            <a href="javascript:void(0);" class="dl_btn_green1" id="submitbutton">
+                                <span class="i18n"><!--reg--></span>
+                            </a>
+                        </div>
+                    
+
+            </form>
+         </div>
+				<div class="dl_loginright width170">
+
+                      <!-- 英文版隐藏第三方登录 -->
+                    
+                        <h3 class="dl_otherchoice">使用以下账号直接登录</h3>
+                      <div class="dl_logos" style="padding-left:7px;">
+                          
+                          <a class="dl_sinalogo dl_grey1 sina" href="javascript:void(0)" url="/User/OAuth/OAuthIndex?snstype=sina_connect_v2&returnurl=%2fxyzp%2f%3fPageIndex%3d6&host=www.jsxyzp.com&portalid=111111"></a>
+                            
+                          <a class="dl_qqlogo dl_grey1 qq" href="javascript:void(0)" url="/User/OAuth/OAuthIndex?snstype=qzone_login&returnurl=%2fxyzp%2f%3fPageIndex%3d6&host=www.jsxyzp.com&portalid=111111"></a>
+                          
+                      </div>
+                    
+                    <div class="dl_register">
+                        
+                        <a href="Login-2Fxyzp2F3FPageIndex3D6.html" class="i18n" style="width:170px;display:block;"><!--sign_in--></a>
+                    </div>
+				</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../static/js/promise.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.validate.unobtrusive.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../../static/js/recruit.geetest.js"></script>
+<script type="text/javascript" src="../../static/js/register.js"></script>
+<script language="javascript" type="text/javascript">
+    window.defaultUrl = '/' || '/';
+    var sysSetting = "Beisen.Recruiting.Channels.Model.SysSetting";
+    window.isServiceTerms = "False";
+    window.privacyPolicyEnable = "False";
+</script>
+
+
+            <!--简历内容 e-->
+        </div>
+        <div class="dl_footer">
+            
+
+<p>©2021&nbsp;京东方科技集团股份有限公司&nbsp;&nbsp;&nbsp<a target="_blank" href="javascript:;" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px; color: #AAAAAA;">京ICP备05051632号-16</a>&nbsp<a target="_blank" href="javascript:;" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px; color: #AAAAAA;"><img src="../../static/picture/beian.png" style="float: left;">京公网安备 11010802020454号</a> &nbsp;&nbsp;帮助热线：4006506886</p>
+        </div>
+    </div>
+
+</body>
+
+<script language="javascript" type="text/javascript">
+</script>
+
+<script language="javascript" type="text/javascript">
+    (function () {
+        BSGlobal.TenantId = 0;
+        BSGlobal.SiteLanguage ='cn';
+        // BSGlobal.SiteLanguage ='cn';
+        // BSGlobal.SiteLanguage ='en';
+
+
+
+    })();
+
+
+
+    function SetCss() {
+        var win = window.location.href;
+        if (win.indexOf("Apply") != -1) {
+            $("#myapply a").addClass("current");
+        }
+        else if (win.indexOf("ResumeItem") != -1) {
+            $("#myresume a").addClass("current");
+        }
+        else if (win.indexOf("EditPwd") != -1) {
+            $("#changepwd a").addClass("current");
+        }
+    }
+    SetCss();
+
+    $(function () {
+        DrawImage($("#logoImg"), '350', '80');
+        //setInterval(function () {
+        //    try {
+        //        DrawImage($("#logoImg"), '350', '80');
+        //    } catch (e) {
+        //    }
+        //}, 100);
+    });
+
+    function DrawImage(ImgD, FitWidth, FitHeight) {
+        var image = new Image();
+
+        image.src = $(ImgD).attr("src");
+
+        if (image.width > 0 && image.height > 0) {
+            if (image.width / image.height >= FitWidth / FitHeight) {
+                if (image.width > FitWidth) {
+                    $(ImgD).css("width", FitWidth);
+                    $(ImgD).css("height", (image.height * FitWidth) / image.width);
+                } else {
+                    $(ImgD).css("width", image.width);
+                    $(ImgD).css("height", image.height);
+                }
+            } else {
+                if (image.height > FitHeight) {
+                    $(ImgD).css("height", FitHeight);
+                    $(ImgD).css("width", (image.width * FitHeight) / image.height);
+                } else {
+                    $(ImgD).css("width", image.width);
+                    $(ImgD).css("height", image.height);
+                }
+            }
+            $(ImgD).show();
+        }
+    }
+</script>
+
+</html>

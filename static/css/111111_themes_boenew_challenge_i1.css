@@ -1,0 +1,621 @@
+#wrapper{
+    min-width: 1000px;
+    position: relative;
+    font-family: Arial, Tahoma, Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53;
+}
+#banner{
+    width: 100%;
+    font-size: 0;
+    position: relative;
+}
+#banner>img{
+    width: 100%;
+}
+.count-down-box{
+    width: 13.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.count-down-writing{
+    width: 1.716rem;
+    margin: 0 0.25rem;
+}
+.count-down-writing>img{
+    width: 75%;
+    margin: auto;
+    display: block;
+}
+.count-down-num{
+    width: 2.216rem;
+}
+.count-down-num>img{
+    width: 0.9rem;
+    padding: 0 0.1rem;
+}
+#icon-list{
+    width: 16rem;
+    margin: auto;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+.icon-item{
+    width: 2.48rem;
+    cursor: pointer;
+}
+.icon-item-img{
+    width: 30%;
+    margin: auto;
+}
+.icon-item-img>img{
+    width: 100%;
+}
+.icon-item>span{
+    display: block;
+    font-size: 0.3rem;
+    color: #33617d;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+#bg-bottom{
+    background-image: url("../image/111111_themes_boenew_challenge_b.png");
+    background-size: 100%;
+    padding-top: 0.3rem;
+}
+#sign-up-btn{
+    width: 4.36rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    margin: auto;
+    background-color: #2f88c2;
+    color: white;
+    border-radius: 0.1rem;
+    /* margin-bottom: 0.7rem; */
+    font-size: 0.3rem;
+    position: relative;
+    cursor: pointer;
+}
+.sign-up-box{
+    position: absolute;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.sign-up-img{
+    width: 0.5rem; background: url(../image/111111_themes_boenew_challenge_s.png) no-repeat center center;
+    background-size: 100% auto;height: 10%
+}
+.sign-up-img>img{
+    width: 100%;
+    vertical-align: middle;
+}
+.sign-up-box>span{
+    margin-left: 0.2rem;
+}
+.entrance{
+    color: #fff;
+    font-size: 0.3rem;
+}
+#download-link{
+    text-align: center;
+    padding-bottom: 2.56rem;
+    font-size: 0.25rem;
+    padding-top: 0.25rem;
+}
+#download-link>a{
+    color: #2f88c2;
+    position: relative;
+}
+#download-link>a:after{
+    content: "";
+    display: block;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    border-bottom: 1px solid #2f88c2;
+    position: absolute;
+}
+
+#mask{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+.modal-frame{
+font-family: Arial, Tahoma, Helvetica, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, 宋体;
+    width: 90%;
+    min-width: 768px;
+    height: 80%;
+    max-height: 10.4rem!important;
+    padding: 0.5rem 0.6rem 0.5rem 0;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    top: 50%;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 11;
+}
+.close-btn{
+    width: 0.3rem;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.5rem;
+    font-size: 0;
+    cursor: pointer;
+}
+.close-btn>img{
+    width: 100%;
+}
+.scroll-box{
+    width: 100%;
+    height: 90%;
+    margin-top: 0.6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;    /* ios5+ */
+}
+.scroll-box::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 0.1rem;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.scroll-box::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0.1rem;
+    background: #dbeaf5;
+}
+.scroll-box::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 0.1rem;
+    background: #eff5fb;
+}
+.isShowContent{
+    width: 100%;
+}
+.isShowContent>img{
+    width: 100%;
+}
+#calendar-year-show{
+    position: relative;
+}
+.swiper-box{
+    width: 80%;
+    width: 13rem;
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+.swiper-box1{
+    top: 5%;
+    background: url("../image/111111_themes_boenew_challenge_2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.swiper-box2{
+    top: 35%;
+    background: url("../image/111111_themes_boenew_challenge_21.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.swiper-box3{
+    top: 65%;
+    background: url("../image/111111_themes_boenew_challenge_22.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.swiper-box4{
+    top: 95%;
+    background: url("../image/111111_themes_boenew_challenge_23.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.swiper-box>img{
+    width: 100%;
+}
+.swiper-box-item{
+    width: 94%;
+    height: 84%;
+    margin: auto;
+    padding-top: 5%;
+    border-radius: 5px;
+    font-size: 0;
+}
+.my-slide-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.my-slide-item-1{
+    background: center url("../image/111111_themes_boenew_challenge_s.jpg");
+    background-size: 100%;
+}
+.my-slide-item-2{
+    background: center url("../image/111111_themes_boenew_challenge_s1.jpg");
+    background-size: 100%;
+}
+.my-slide-item-3{
+    background: center url("../image/111111_themes_boenew_challenge_s2.jpg");
+    background-size: 100%;
+}
+.my-slide-item-4{
+    background: center url("../image/111111_themes_boenew_challenge_s3.jpg");
+    background-size: 100%;
+}
+.my-slide-item-5{
+    background: center url("../image/111111_themes_boenew_challenge_s4.jpg");
+    background-size: 100%;
+}
+.my-slide-item-6{
+    background: center url("../image/111111_themes_boenew_challenge_s5.jpg");
+    background-size: 100%;
+}
+.my-slide-item-7{
+    background: center url("../image/111111_themes_boenew_challenge_s6.jpg");
+    background-size: 100%;
+}
+.my-slide-item-8{
+    background: center url("../image/111111_themes_boenew_challenge_s7.jpg");
+    background-size: 100%;
+}
+.my-slide-item-9{
+    background: center url("../image/111111_themes_boenew_challenge_s8.jpg");
+    background-size: 100%;
+}
+.my-slide-item-10{
+    background: center url("../image/111111_themes_boenew_challenge_s9.jpg");
+    background-size: 100%;
+}
+
+
+
+.my-slide-item-11{
+    background: center url("../image/111111_themes_boenew_challenge_s10.jpg");
+    background-size: 100%;
+}
+.my-slide-item-12{
+    background: center url("../image/111111_themes_boenew_challenge_s11.jpg");
+    background-size: 100%;
+}
+.my-slide-item-13{
+    background: center url("../image/111111_themes_boenew_challenge_s12.jpg");
+    background-size: 100%;
+}
+.my-slide-item-14{
+    background: center url("../image/111111_themes_boenew_challenge_s13.jpg");
+    background-size: 100%;
+}
+.my-slide-item-15{
+    background: center url("../image/111111_themes_boenew_challenge_s14.jpg");
+    background-size: 100%;
+}
+
+
+
+
+
+
+.my-slide-item-16{
+    background: center url("../image/111111_themes_boenew_challenge_s15.jpg");
+    background-size: 100%;
+}
+.my-slide-item-17{
+    background: center url("../image/111111_themes_boenew_challenge_s16.jpg");
+    background-size: 100%;
+}
+.my-slide-item-18{
+    background: center url("../image/111111_themes_boenew_challenge_s17.jpg");
+    background-size: 100%;
+}
+.my-slide-item-19{
+    background: center url("../image/111111_themes_boenew_challenge_s18.jpg");
+    background-size: 100%;
+}
+.my-slide-item-20{
+    background: center url("../image/111111_themes_boenew_challenge_s19.jpg");
+    background-size: 100%;
+}
+.swiper-box-item>img{
+    width: 100%;
+}
+.bottom-bg{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0.75rem;
+    background-color: #000;
+    opacity: 0.6;
+    border-radius: 0 0 5px 5px;
+}
+.my-slide-item>span{
+    width: 100%;
+    position: absolute;
+    display: block;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    line-height: 0.75rem;
+    letter-spacing: 1px;
+    font-size: 0.3rem;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+}
+#qa-content,
+#message-sharing,
+#competition-direction{
+    background: url("../image/111111_themes_boenew_challenge_l.png");
+    background-size: 100%;
+}
+.share-img-box{
+    background: url("../image/111111_themes_boenew_challenge_i.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 3% 0;
+}
+.share-img-box>img{
+    width: 94%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+.common-width{
+    width: 94%;
+    margin: auto;
+}
+.modal-frame-title-box{
+    width: 75%;
+    margin: auto;
+}
+.title-box{
+    width: 33.3%;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #4b728f;
+    font-weight: bold;
+}
+.title-box>img{
+    width: 100%;
+}
+.qa-list,
+.share{
+    width: 75%;
+    margin: auto;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.share-img-box>span{
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+    font-size: 0.2rem;
+    color: #718b9d;
+}
+.bg-proposition>h2{
+    font-size: 0.35rem;
+    color: #3e647f;
+    text-align: center;
+    padding-top: 0.45rem;
+    padding-bottom: 0.3rem;
+}
+.bg-proposition>h3{
+    color: #2f88c2;
+    font-size: 0.28rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+}
+.bg-proposition>p{
+    line-height: 0.55rem;
+    color: #40515d;
+    font-size: 0.25rem;
+    text-align: justify;
+    padding: 0.1rem 0;
+}
+.schedule-list{
+    width: 100%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+}
+.schedule-item{
+    width: 28%;
+    border: 0.07rem solid #f2f9ff;
+    box-sizing: border-box;
+    padding: 0.4rem 0;
+    border-radius: 0.2rem;
+}
+.schedule-item>img, .schedule-arrow>img{
+    width: 1.51rem;
+    height: 1.26rem;
+    display: block;
+    margin: auto;
+}
+.schedule-arrow>img{
+    width: 0.22rem;
+    height: 0.22rem;
+    margin-top: 2rem;
+}
+.schedule-item>h3{
+    color: #3e647f;
+    font-size: 0.35rem;
+    text-align: center;
+    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+}
+.schedule-item span{
+    color: #2f88c2;
+}
+.schedule-item>p{
+    line-height: 0.55rem;
+    color: #7c96a9;
+    font-size: 0.3rem;
+    text-align: center;
+}
+.bg-proposition>table{
+    width: 100%;
+    font-size: 0.25rem;
+    border-collapse:collapse;
+    text-align: center;
+    margin: 0.88rem 0;
+    border: 0.03rem solid #ddeaf3;
+    letter-spacing: 0.02rem;
+}
+.bg-proposition tr{
+    border-bottom: 0.03rem solid #ddeaf3;
+}
+.bg-proposition th{
+    color: #7c96a9;
+    font-size: 0.28rem;
+    line-height: 0.6rem;
+    font-weight: 500;
+    border-right: 0.03rem solid #ddeaf3;
+}
+.bg-proposition td{
+    color: #40515d;
+    line-height: 0.55rem;
+    border-right: 0.03rem solid #ddeaf3;
+}
+.bg-proposition tr:last-child{
+    border: none;
+}
+.bg-proposition th:last-child{
+    border: none;
+}
+.bg-proposition td:last-child{
+    border: none;
+}
+.schedule-arrow{
+    width: 8%;
+}
+.bottom-text{
+    width: 100%;
+    font-size: 0.25rem;
+    color: #40515d;
+    text-align: right;
+    padding-top: 0.35rem;
+}
+.pad-top{
+    margin-top: 0.5rem;
+}
+.questions-and-answers>h3{
+    font-size: 0.35rem;
+    color: #3e647f;
+    text-align: center;
+    padding-top: 0.85rem;
+    padding-bottom: 0.35rem;
+}
+.questions-and-answers>p{
+    font-size: 0.25rem;
+    line-height: 0.55rem;
+    color: #40515d;
+    text-align: justify;
+}
+.questions-and-answers span{
+    color: #2f88c2;
+}
+.qa-item{
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    color: #3e647f;
+}
+.qa-item:last-child{
+    border-bottom: none;
+}
+.qa-item>h3{
+    padding-top: 5%;
+    padding-bottom: 0.45rem;
+    letter-spacing: 2px;
+    font-size: 0.3rem;
+}
+.qa-item>p{
+    padding-bottom: 0.65rem;
+    font-size: 0.25rem;
+    line-height: 0.55rem;
+}
+
+.qa-item span{
+    color: #2f88c2;
+}
+
+.arrow-left, .arrow-right{
+    position: absolute;
+    width: 7.1rem;
+    height: 84%;
+    z-index: 3;
+}
+.arrow-left {
+    background: url("../image/111111_themes_boenew_challenge_p.png") no-repeat left top;
+    background-size: 3%;
+    background-position-y: 47%;
+    left: -0.6rem;
+  }
+.arrow-right {
+    background: url("../image/111111_themes_boenew_challenge_n.png") no-repeat right bottom;
+    background-size: 3%!important;
+    background-position-y: 47%;
+    background-size: 100%;
+    right: -0.6rem;
+}
+.loading-box{
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translate(-50%);
+    top: 50%;
+    visibility: hidden;
+}
+
+.loading-box>img{
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    margin: auto;
+}
+.top-text{
+    padding-bottom: 0.9rem;
+}
+.bg-blue{
+    background-color: #f4faff;
+}
+#bottom-tips{
+    width: 0.51rem;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 4;
+}
+#bottom-tips>img{
+    width: 100%;
+    height: 0.38rem;
+}
